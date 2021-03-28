@@ -1,0 +1,3666 @@
+Starting... 
+2020-07-11 16:03:15.503073: Using dummy2d data augmentation 
+2020-07-11 16:03:16.238378: TRAINING KEYS:
+ odict_keys(['0', '1', '10', '100', '101', '102', '106', '107', '108', '11', '114', '118', '119', '12', '120', '124', '125', '126', '127', '128', '129', '13', '130', '131', '132', '138', '139', '140', '142', '144', '145', '146', '15', '154', '155', '156', '157', '158', '16', '161', '162', '166', '170', '174', '175', '176', '177', '178', '179', '18', '180', '181', '189', '190', '192', '193', '194', '195', '196', '2', '20', '200', '201', '202', '206', '207', '21', '211', '213', '215', '218', '219', '22', '220', '221', '222', '224', '228', '229', '23', '230', '231', '232', '233', '234', '236', '237', '238', '24', '243', '244', '25', '251', '253', '254', '255', '26', '262', '263', '264', '265', '266', '268', '269', '27', '270', '272', '273', '274', '275', '276', '277', '278', '279', '280', '281', '282', '284', '286', '288', '29', '291', '292', '294', '295', '296', '298', '299', '3', '30', '300', '301', '302', '303', '304', '305', '306', '307', '31', '318', '319', '320', '321', '323', '324', '326', '330', '331', '336', '337', '338', '340', '341', '342', '343', '344', '345', '346', '347', '348', '35', '353', '354', '355', '356', '357', '358', '359', '361', '362', '363', '364', '365', '366', '367', '368', '369', '370', '371', '372', '373', '374', '375', '376', '377', '382', '383', '384', '385', '386', '389', '390', '398', '40', '400', '401', '402', '403', '404', '406', '407', '41', '410', '411', '412', '416', '417', '418', '419', '42', '420', '424', '426', '43', '430', '431', '432', '434', '435', '436', '44', '440', '441', '443', '444', '449', '45', '450', '452', '453', '454', '455', '46', '460', '461', '464', '465', '466', '467', '468', '469', '47', '470', '471', '472', '477', '478', '479', '48', '480', '481', '482', '484', '485', '49', '501', '503', '504', '505', '51', '510', '511', '512', '515', '516', '517', '518', '519', '520', '521', '522', '526', '527', '528', '529', '53', '530', '531', '532', '536', '539', '54', '540', '544', '547', '548', '549', '55', '550', '551', '552', '554', '555', '556', '557', '558', '559', '56', '560', '561', '562', '563', '564', '565', '566', '567', '568', '569', '57', '570', '571', '575', '576', '577', '579', '58', '581', '582', '583', '587', '591', '592', '595', '596', '597', '598', '599', '6', '60', '600', '601', '602', '603', '604', '605', '606', '607', '609', '611', '612', '613', '614', '615', '616', '617', '618', '619', '620', '621', '622', '626', '627', '628', '629', '630', '631', '633', '634', '635', '636', '637', '64', '642', '643', '644', '645', '646', '647', '65', '651', '652', '659', '660', '664', '665', '666', '667', '668', '672', '673', '674', '675', '676', '677', '678', '679', '680', '684', '685', '686', '687', '688', '689', '690', '691', '692', '693', '694', '696', '697', '698', '7', '70', '700', '71', '72', '73', '74', '77', '78', '79', '80', '81', '82', '84', '85', '88', '89', '9', '90', '91', '93', '94', '95', '97', '98', '99']) 
+2020-07-11 16:03:16.239100: VALIDATION KEYS:
+ odict_keys(['112', '113', '133', '134', '14', '141', '143', '153', '159', '160', '17', '171', '172', '173', '182', '19', '191', '212', '214', '216', '217', '223', '225', '226', '227', '235', '242', '252', '267', '271', '28', '283', '285', '287', '289', '290', '293', '297', '317', '32', '322', '325', '33', '335', '339', '34', '352', '36', '360', '378', '387', '388', '391', '399', '4', '405', '408', '409', '425', '433', '442', '448', '451', '456', '462', '463', '473', '483', '5', '50', '502', '509', '513', '514', '52', '533', '534', '535', '537', '538', '545', '546', '553', '572', '573', '574', '578', '580', '59', '593', '594', '608', '610', '632', '641', '66', '695', '699', '701', '75', '76', '8', '83', '86', '87', '92', '96']) 
+2020-07-11 16:03:20.342097: loading checkpoint /home/woznicki/kidney/axial_nnUNet/base/nnUNet_trained_models/nnUNet/3d_fullres/Task003_coronal/nnUNetTrainerV2__nnUNetPlansv2.1/fold_0/model_latest.model train= True 
+2020-07-11 16:03:21.345983: lr: 0.004874 
+2020-07-11 16:03:28.738368: Unable to plot network architecture: 
+2020-07-11 16:03:28.739487: No module named 'hiddenlayer' 
+2020-07-11 16:03:28.740147: 
+printing the network instead:
+ 
+2020-07-11 16:03:28.740716: Generic_UNet(
+  (conv_blocks_localization): ModuleList(
+    (0): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(640, 320, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (1): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(512, 256, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(256, 256, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (2): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(256, 128, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(128, 128, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (3): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(128, 64, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(64, 64, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+    (4): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(64, 32, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(32, 32, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+  )
+  (conv_blocks_context): ModuleList(
+    (0): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(1, 32, kernel_size=[1, 3, 3], stride=(1, 1, 1), padding=[0, 1, 1])
+          (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(32, 32, kernel_size=[1, 3, 3], stride=(1, 1, 1), padding=[0, 1, 1])
+          (instnorm): InstanceNorm3d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (1): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(32, 64, kernel_size=[3, 3, 3], stride=[1, 2, 2], padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(64, 64, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (2): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(64, 128, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(128, 128, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (3): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(128, 256, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(256, 256, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (4): StackedConvLayers(
+      (blocks): Sequential(
+        (0): ConvDropoutNormNonlin(
+          (conv): Conv3d(256, 320, kernel_size=[3, 3, 3], stride=[2, 2, 2], padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+        (1): ConvDropoutNormNonlin(
+          (conv): Conv3d(320, 320, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+          (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+          (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+        )
+      )
+    )
+    (5): Sequential(
+      (0): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=[3, 3, 3], stride=[1, 2, 2], padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+      (1): StackedConvLayers(
+        (blocks): Sequential(
+          (0): ConvDropoutNormNonlin(
+            (conv): Conv3d(320, 320, kernel_size=[3, 3, 3], stride=(1, 1, 1), padding=[1, 1, 1])
+            (instnorm): InstanceNorm3d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=False)
+            (lrelu): LeakyReLU(negative_slope=0.01, inplace=True)
+          )
+        )
+      )
+    )
+  )
+  (td): ModuleList()
+  (tu): ModuleList(
+    (0): ConvTranspose3d(320, 320, kernel_size=[1, 2, 2], stride=[1, 2, 2], bias=False)
+    (1): ConvTranspose3d(320, 256, kernel_size=[2, 2, 2], stride=[2, 2, 2], bias=False)
+    (2): ConvTranspose3d(256, 128, kernel_size=[2, 2, 2], stride=[2, 2, 2], bias=False)
+    (3): ConvTranspose3d(128, 64, kernel_size=[2, 2, 2], stride=[2, 2, 2], bias=False)
+    (4): ConvTranspose3d(64, 32, kernel_size=[1, 2, 2], stride=[1, 2, 2], bias=False)
+  )
+  (seg_outputs): ModuleList(
+    (0): Conv3d(320, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (1): Conv3d(256, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (2): Conv3d(128, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (3): Conv3d(64, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+    (4): Conv3d(32, 3, kernel_size=(1, 1, 1), stride=(1, 1, 1), bias=False)
+  )
+) 
+2020-07-11 16:03:28.744330: 
+ 
+2020-07-11 16:03:28.745751: 
+epoch:  550 
+2020-07-11 16:07:26.265423: train loss : -0.8768 
+2020-07-11 16:07:42.438896: validation loss: -0.8717 
+2020-07-11 16:07:42.440530: Average global foreground Dice: [0.9600129746073665, 0.9592927965987915] 
+2020-07-11 16:07:42.441252: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:07:43.624062: lr: 0.004864 
+2020-07-11 16:07:43.625066: This epoch took 254.878804 s
+ 
+2020-07-11 16:07:43.625646: 
+epoch:  551 
+2020-07-11 16:11:19.819561: train loss : -0.8840 
+2020-07-11 16:11:36.000993: validation loss: -0.8711 
+2020-07-11 16:11:36.002510: Average global foreground Dice: [0.9625957581273604, 0.9515998845799309] 
+2020-07-11 16:11:36.003227: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:11:37.168124: lr: 0.004855 
+2020-07-11 16:11:37.169230: This epoch took 233.543077 s
+ 
+2020-07-11 16:11:37.169952: 
+epoch:  552 
+2020-07-11 16:15:13.313643: train loss : -0.8676 
+2020-07-11 16:15:29.523531: validation loss: -0.8857 
+2020-07-11 16:15:29.524834: Average global foreground Dice: [0.9616269635033726, 0.9580783462457548] 
+2020-07-11 16:15:29.525499: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:15:30.686002: lr: 0.004845 
+2020-07-11 16:15:30.686990: This epoch took 233.516433 s
+ 
+2020-07-11 16:15:30.687501: 
+epoch:  553 
+2020-07-11 16:19:06.737021: train loss : -0.8791 
+2020-07-11 16:19:22.932582: validation loss: -0.8908 
+2020-07-11 16:19:22.934063: Average global foreground Dice: [0.9630418709579449, 0.9568471493346619] 
+2020-07-11 16:19:22.934826: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:19:24.096266: lr: 0.004835 
+2020-07-11 16:19:24.097070: This epoch took 233.409071 s
+ 
+2020-07-11 16:19:24.097602: 
+epoch:  554 
+2020-07-11 16:23:00.247154: train loss : -0.8678 
+2020-07-11 16:23:16.500076: validation loss: -0.8841 
+2020-07-11 16:23:16.501507: Average global foreground Dice: [0.9630462678746607, 0.9559937235998791] 
+2020-07-11 16:23:16.502279: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:23:17.666001: lr: 0.004825 
+2020-07-11 16:23:17.666989: This epoch took 233.568969 s
+ 
+2020-07-11 16:23:17.667505: 
+epoch:  555 
+2020-07-11 16:26:53.950300: train loss : -0.8673 
+2020-07-11 16:27:10.175939: validation loss: -0.8821 
+2020-07-11 16:27:10.177520: Average global foreground Dice: [0.9621247963145199, 0.9581284866832033] 
+2020-07-11 16:27:10.178318: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:27:11.340288: lr: 0.004816 
+2020-07-11 16:27:11.341235: This epoch took 233.673330 s
+ 
+2020-07-11 16:27:11.341709: 
+epoch:  556 
+2020-07-11 16:30:47.616080: train loss : -0.8791 
+2020-07-11 16:31:03.855422: validation loss: -0.8876 
+2020-07-11 16:31:03.856910: Average global foreground Dice: [0.9662762866983376, 0.9588656026941782] 
+2020-07-11 16:31:03.857789: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:31:05.036031: lr: 0.004806 
+2020-07-11 16:31:05.109417: saving checkpoint... 
+2020-07-11 16:31:05.586911: done, saving took 0.55 seconds 
+2020-07-11 16:31:05.620703: This epoch took 234.278568 s
+ 
+2020-07-11 16:31:05.621534: 
+epoch:  557 
+2020-07-11 16:34:41.785842: train loss : -0.8752 
+2020-07-11 16:34:58.047817: validation loss: -0.8628 
+2020-07-11 16:34:58.049278: Average global foreground Dice: [0.9574362371515894, 0.9503332221364759] 
+2020-07-11 16:34:58.050075: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:34:59.213910: lr: 0.004796 
+2020-07-11 16:34:59.214820: This epoch took 233.592649 s
+ 
+2020-07-11 16:34:59.215371: 
+epoch:  558 
+2020-07-11 16:38:35.654897: train loss : -0.8754 
+2020-07-11 16:38:51.970098: validation loss: -0.8803 
+2020-07-11 16:38:51.971506: Average global foreground Dice: [0.9650110468927069, 0.9577444883385974] 
+2020-07-11 16:38:51.972169: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:38:53.134700: lr: 0.004786 
+2020-07-11 16:38:53.135693: This epoch took 233.919884 s
+ 
+2020-07-11 16:38:53.136215: 
+epoch:  559 
+2020-07-11 16:42:29.392250: train loss : -0.8733 
+2020-07-11 16:42:45.620081: validation loss: -0.8735 
+2020-07-11 16:42:45.621579: Average global foreground Dice: [0.9620634164347333, 0.9479809700510535] 
+2020-07-11 16:42:45.622339: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:42:46.786569: lr: 0.004776 
+2020-07-11 16:42:46.787444: This epoch took 233.650735 s
+ 
+2020-07-11 16:42:46.787897: 
+epoch:  560 
+2020-07-11 16:46:23.005117: train loss : -0.8621 
+2020-07-11 16:46:39.250665: validation loss: -0.8703 
+2020-07-11 16:46:39.252124: Average global foreground Dice: [0.961489696941321, 0.9482420641844406] 
+2020-07-11 16:46:39.252891: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:46:40.419129: lr: 0.004767 
+2020-07-11 16:46:40.420107: This epoch took 233.631794 s
+ 
+2020-07-11 16:46:40.420593: 
+epoch:  561 
+2020-07-11 16:50:16.598150: train loss : -0.8678 
+2020-07-11 16:50:32.834238: validation loss: -0.8659 
+2020-07-11 16:50:32.835747: Average global foreground Dice: [0.9561348129623621, 0.9517836044650757] 
+2020-07-11 16:50:32.836548: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:50:34.002450: lr: 0.004757 
+2020-07-11 16:50:34.003343: This epoch took 233.582252 s
+ 
+2020-07-11 16:50:34.003899: 
+epoch:  562 
+2020-07-11 16:54:10.280658: train loss : -0.8488 
+2020-07-11 16:54:26.550722: validation loss: -0.8718 
+2020-07-11 16:54:26.552193: Average global foreground Dice: [0.9626973437049446, 0.9545811939393011] 
+2020-07-11 16:54:26.552955: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:54:27.715869: lr: 0.004747 
+2020-07-11 16:54:27.716886: This epoch took 233.712526 s
+ 
+2020-07-11 16:54:27.717514: 
+epoch:  563 
+2020-07-11 16:58:04.129570: train loss : -0.8674 
+2020-07-11 16:58:20.356868: validation loss: -0.8801 
+2020-07-11 16:58:20.358276: Average global foreground Dice: [0.9669607931738757, 0.9530081923163095] 
+2020-07-11 16:58:20.358970: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 16:58:21.523174: lr: 0.004737 
+2020-07-11 16:58:21.524124: This epoch took 233.806086 s
+ 
+2020-07-11 16:58:21.524641: 
+epoch:  564 
+2020-07-11 17:01:57.875405: train loss : -0.8541 
+2020-07-11 17:02:14.115724: validation loss: -0.8546 
+2020-07-11 17:02:14.117329: Average global foreground Dice: [0.9549791431630498, 0.9511187253872163] 
+2020-07-11 17:02:14.118052: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:02:15.280584: lr: 0.004728 
+2020-07-11 17:02:15.281505: This epoch took 233.756338 s
+ 
+2020-07-11 17:02:15.282006: 
+epoch:  565 
+2020-07-11 17:05:51.497571: train loss : -0.8768 
+2020-07-11 17:06:07.753465: validation loss: -0.8843 
+2020-07-11 17:06:07.755025: Average global foreground Dice: [0.9617380529177476, 0.9565904524948196] 
+2020-07-11 17:06:07.755831: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:06:08.917363: lr: 0.004718 
+2020-07-11 17:06:08.918265: This epoch took 233.635814 s
+ 
+2020-07-11 17:06:08.918819: 
+epoch:  566 
+2020-07-11 17:09:45.277766: train loss : -0.8590 
+2020-07-11 17:10:01.528759: validation loss: -0.8679 
+2020-07-11 17:10:01.530479: Average global foreground Dice: [0.960334651077261, 0.9505412942539533] 
+2020-07-11 17:10:01.531367: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:10:02.706874: lr: 0.004708 
+2020-07-11 17:10:02.707978: This epoch took 233.788667 s
+ 
+2020-07-11 17:10:02.708713: 
+epoch:  567 
+2020-07-11 17:13:39.076105: train loss : -0.8644 
+2020-07-11 17:13:55.312778: validation loss: -0.8534 
+2020-07-11 17:13:55.314496: Average global foreground Dice: [0.9552014343459994, 0.9535642921909862] 
+2020-07-11 17:13:55.315403: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:13:56.485018: lr: 0.004698 
+2020-07-11 17:13:56.486180: This epoch took 233.776778 s
+ 
+2020-07-11 17:13:56.486820: 
+epoch:  568 
+2020-07-11 17:17:32.973611: train loss : -0.8700 
+2020-07-11 17:17:49.222893: validation loss: -0.8724 
+2020-07-11 17:17:49.224549: Average global foreground Dice: [0.9601352142703732, 0.9581497597576694] 
+2020-07-11 17:17:49.225481: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:17:50.387613: lr: 0.004688 
+2020-07-11 17:17:50.388777: This epoch took 233.901387 s
+ 
+2020-07-11 17:17:50.389502: 
+epoch:  569 
+2020-07-11 17:21:26.752476: train loss : -0.8863 
+2020-07-11 17:21:42.986259: validation loss: -0.8855 
+2020-07-11 17:21:42.988016: Average global foreground Dice: [0.9671748386345772, 0.9582708435851388] 
+2020-07-11 17:21:42.988976: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:21:44.157143: lr: 0.004679 
+2020-07-11 17:21:44.158306: This epoch took 233.768179 s
+ 
+2020-07-11 17:21:44.158975: 
+epoch:  570 
+2020-07-11 17:25:20.637867: train loss : -0.8771 
+2020-07-11 17:25:36.880688: validation loss: -0.8881 
+2020-07-11 17:25:36.882388: Average global foreground Dice: [0.9628946873732822, 0.9575469766885698] 
+2020-07-11 17:25:36.883299: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:25:38.051219: lr: 0.004669 
+2020-07-11 17:25:38.052347: This epoch took 233.892678 s
+ 
+2020-07-11 17:25:38.053104: 
+epoch:  571 
+2020-07-11 17:29:14.436602: train loss : -0.8641 
+2020-07-11 17:29:30.659575: validation loss: -0.8756 
+2020-07-11 17:29:30.661427: Average global foreground Dice: [0.9634767523448886, 0.9533814057981845] 
+2020-07-11 17:29:30.662369: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:29:31.827310: lr: 0.004659 
+2020-07-11 17:29:31.828494: This epoch took 233.774727 s
+ 
+2020-07-11 17:29:31.829255: 
+epoch:  572 
+2020-07-11 17:33:08.324906: train loss : -0.8650 
+2020-07-11 17:33:24.601408: validation loss: -0.8780 
+2020-07-11 17:33:24.603058: Average global foreground Dice: [0.9621219634499925, 0.9562198442300912] 
+2020-07-11 17:33:24.603799: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:33:25.768691: lr: 0.004649 
+2020-07-11 17:33:25.769808: This epoch took 233.939865 s
+ 
+2020-07-11 17:33:25.770556: 
+epoch:  573 
+2020-07-11 17:37:02.199595: train loss : -0.8785 
+2020-07-11 17:37:18.476891: validation loss: -0.8837 
+2020-07-11 17:37:18.478579: Average global foreground Dice: [0.9638910937125734, 0.9531247825538581] 
+2020-07-11 17:37:18.479538: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:37:19.647388: lr: 0.004639 
+2020-07-11 17:37:19.648588: This epoch took 233.877307 s
+ 
+2020-07-11 17:37:19.649232: 
+epoch:  574 
+2020-07-11 17:40:56.071312: train loss : -0.8728 
+2020-07-11 17:41:12.344959: validation loss: -0.8892 
+2020-07-11 17:41:12.346709: Average global foreground Dice: [0.9637061023885857, 0.9590901116208685] 
+2020-07-11 17:41:12.347644: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:41:13.515271: lr: 0.00463 
+2020-07-11 17:41:13.516379: This epoch took 233.866403 s
+ 
+2020-07-11 17:41:13.517034: 
+epoch:  575 
+2020-07-11 17:44:49.747951: train loss : -0.8610 
+2020-07-11 17:45:06.032525: validation loss: -0.8819 
+2020-07-11 17:45:06.034324: Average global foreground Dice: [0.9606897324245969, 0.9575537794080886] 
+2020-07-11 17:45:06.035204: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:45:07.206818: lr: 0.00462 
+2020-07-11 17:45:07.208061: This epoch took 233.690419 s
+ 
+2020-07-11 17:45:07.208872: 
+epoch:  576 
+2020-07-11 17:48:43.656837: train loss : -0.8603 
+2020-07-11 17:48:59.925206: validation loss: -0.8720 
+2020-07-11 17:48:59.926931: Average global foreground Dice: [0.9603499522849559, 0.954415278775313] 
+2020-07-11 17:48:59.927814: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:49:01.094562: lr: 0.00461 
+2020-07-11 17:49:01.095744: This epoch took 233.886151 s
+ 
+2020-07-11 17:49:01.096512: 
+epoch:  577 
+2020-07-11 17:52:37.350039: train loss : -0.8650 
+2020-07-11 17:52:53.605098: validation loss: -0.8512 
+2020-07-11 17:52:53.606723: Average global foreground Dice: [0.9532146840225224, 0.944860707167562] 
+2020-07-11 17:52:53.607644: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:52:54.776392: lr: 0.0046 
+2020-07-11 17:52:54.778072: This epoch took 233.680924 s
+ 
+2020-07-11 17:52:54.778691: 
+epoch:  578 
+2020-07-11 17:56:31.051171: train loss : -0.8540 
+2020-07-11 17:56:47.336037: validation loss: -0.8560 
+2020-07-11 17:56:47.337774: Average global foreground Dice: [0.9530104634604242, 0.9461994292864223] 
+2020-07-11 17:56:47.338710: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 17:56:48.507253: lr: 0.00459 
+2020-07-11 17:56:48.508431: This epoch took 233.729157 s
+ 
+2020-07-11 17:56:48.509099: 
+epoch:  579 
+2020-07-11 18:00:24.821131: train loss : -0.8812 
+2020-07-11 18:00:41.088092: validation loss: -0.8848 
+2020-07-11 18:00:41.089952: Average global foreground Dice: [0.9610966912430849, 0.9598526395477868] 
+2020-07-11 18:00:41.090907: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:00:42.258977: lr: 0.004581 
+2020-07-11 18:00:42.260143: This epoch took 233.750398 s
+ 
+2020-07-11 18:00:42.260837: 
+epoch:  580 
+2020-07-11 18:04:18.708069: train loss : -0.8725 
+2020-07-11 18:04:34.952726: validation loss: -0.8761 
+2020-07-11 18:04:34.954410: Average global foreground Dice: [0.9623379700717695, 0.9551349230948152] 
+2020-07-11 18:04:34.955388: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:04:36.124898: lr: 0.004571 
+2020-07-11 18:04:36.126083: This epoch took 233.864599 s
+ 
+2020-07-11 18:04:36.126764: 
+epoch:  581 
+2020-07-11 18:08:12.458123: train loss : -0.8769 
+2020-07-11 18:08:28.730945: validation loss: -0.8636 
+2020-07-11 18:08:28.732595: Average global foreground Dice: [0.9625872873176502, 0.9561877516285939] 
+2020-07-11 18:08:28.733566: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:08:29.896140: lr: 0.004561 
+2020-07-11 18:08:29.897253: This epoch took 233.769786 s
+ 
+2020-07-11 18:08:29.898040: 
+epoch:  582 
+2020-07-11 18:12:06.354847: train loss : -0.8707 
+2020-07-11 18:12:22.649460: validation loss: -0.8769 
+2020-07-11 18:12:22.651213: Average global foreground Dice: [0.9628902494689001, 0.9586907966744936] 
+2020-07-11 18:12:22.652153: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:12:23.819706: lr: 0.004551 
+2020-07-11 18:12:23.820873: This epoch took 233.922197 s
+ 
+2020-07-11 18:12:23.821618: 
+epoch:  583 
+2020-07-11 18:16:00.277797: train loss : -0.8796 
+2020-07-11 18:16:16.538884: validation loss: -0.8863 
+2020-07-11 18:16:16.540529: Average global foreground Dice: [0.962933696559731, 0.9590445994487363] 
+2020-07-11 18:16:16.541485: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:16:17.759140: lr: 0.004541 
+2020-07-11 18:16:17.760514: This epoch took 233.938183 s
+ 
+2020-07-11 18:16:17.761429: 
+epoch:  584 
+2020-07-11 18:19:54.237597: train loss : -0.8838 
+2020-07-11 18:20:10.483459: validation loss: -0.8982 
+2020-07-11 18:20:10.485122: Average global foreground Dice: [0.9649965779023186, 0.9609479388862067] 
+2020-07-11 18:20:10.485999: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:20:11.663635: lr: 0.004532 
+2020-07-11 18:20:11.664789: This epoch took 233.902664 s
+ 
+2020-07-11 18:20:11.665612: 
+epoch:  585 
+2020-07-11 18:23:48.114817: train loss : -0.8835 
+2020-07-11 18:24:04.365088: validation loss: -0.8877 
+2020-07-11 18:24:04.366633: Average global foreground Dice: [0.9657376882251484, 0.9588146173599595] 
+2020-07-11 18:24:04.367647: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:24:05.533986: lr: 0.004522 
+2020-07-11 18:24:05.535155: This epoch took 233.868898 s
+ 
+2020-07-11 18:24:05.535824: 
+epoch:  586 
+2020-07-11 18:27:41.993207: train loss : -0.8861 
+2020-07-11 18:27:58.239271: validation loss: -0.8934 
+2020-07-11 18:27:58.240974: Average global foreground Dice: [0.9654521214362433, 0.9586150924415462] 
+2020-07-11 18:27:58.241712: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:27:59.407179: lr: 0.004512 
+2020-07-11 18:27:59.408332: This epoch took 233.871827 s
+ 
+2020-07-11 18:27:59.409089: 
+epoch:  587 
+2020-07-11 18:31:35.763550: train loss : -0.8862 
+2020-07-11 18:31:51.993716: validation loss: -0.8741 
+2020-07-11 18:31:51.995270: Average global foreground Dice: [0.9624484991002985, 0.9578434207173363] 
+2020-07-11 18:31:51.996181: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:31:53.162754: lr: 0.004502 
+2020-07-11 18:31:53.163892: This epoch took 233.754224 s
+ 
+2020-07-11 18:31:53.164689: 
+epoch:  588 
+2020-07-11 18:35:29.574269: train loss : -0.8885 
+2020-07-11 18:35:45.842894: validation loss: -0.8873 
+2020-07-11 18:35:45.844583: Average global foreground Dice: [0.9654229917766961, 0.9596680093212089] 
+2020-07-11 18:35:45.845645: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:35:47.012743: lr: 0.004492 
+2020-07-11 18:35:47.013874: This epoch took 233.848520 s
+ 
+2020-07-11 18:35:47.014603: 
+epoch:  589 
+2020-07-11 18:39:23.279780: train loss : -0.8790 
+2020-07-11 18:39:39.584981: validation loss: -0.8878 
+2020-07-11 18:39:39.586610: Average global foreground Dice: [0.9663784700680597, 0.9577199322318183] 
+2020-07-11 18:39:39.587595: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:39:40.751995: lr: 0.004482 
+2020-07-11 18:39:40.797881: saving checkpoint... 
+2020-07-11 18:39:41.296215: done, saving took 0.54 seconds 
+2020-07-11 18:39:41.320411: This epoch took 234.305187 s
+ 
+2020-07-11 18:39:41.321297: 
+epoch:  590 
+2020-07-11 18:43:17.783713: train loss : -0.8868 
+2020-07-11 18:43:34.070762: validation loss: -0.8964 
+2020-07-11 18:43:34.072491: Average global foreground Dice: [0.9662999886775855, 0.9585206220317615] 
+2020-07-11 18:43:34.073416: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:43:35.237340: lr: 0.004473 
+2020-07-11 18:43:35.280625: saving checkpoint... 
+2020-07-11 18:43:35.763600: done, saving took 0.53 seconds 
+2020-07-11 18:43:35.788436: This epoch took 234.466389 s
+ 
+2020-07-11 18:43:35.789260: 
+epoch:  591 
+2020-07-11 18:47:12.311797: train loss : -0.8886 
+2020-07-11 18:47:28.591144: validation loss: -0.8780 
+2020-07-11 18:47:28.592916: Average global foreground Dice: [0.966493844971294, 0.9532432573307126] 
+2020-07-11 18:47:28.593879: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:47:29.844402: lr: 0.004463 
+2020-07-11 18:47:29.845587: This epoch took 234.055571 s
+ 
+2020-07-11 18:47:29.846272: 
+epoch:  592 
+2020-07-11 18:51:06.306992: train loss : -0.8904 
+2020-07-11 18:51:22.636377: validation loss: -0.8947 
+2020-07-11 18:51:22.638099: Average global foreground Dice: [0.967535457080924, 0.9609269373066116] 
+2020-07-11 18:51:22.639020: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:51:23.802803: lr: 0.004453 
+2020-07-11 18:51:23.848903: saving checkpoint... 
+2020-07-11 18:51:24.347165: done, saving took 0.54 seconds 
+2020-07-11 18:51:24.371481: This epoch took 234.524544 s
+ 
+2020-07-11 18:51:24.372349: 
+epoch:  593 
+2020-07-11 18:55:00.912432: train loss : -0.8876 
+2020-07-11 18:55:17.217613: validation loss: -0.8880 
+2020-07-11 18:55:17.219289: Average global foreground Dice: [0.9637357915472008, 0.9539396937177056] 
+2020-07-11 18:55:17.220265: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:55:18.385375: lr: 0.004443 
+2020-07-11 18:55:18.386617: This epoch took 234.013521 s
+ 
+2020-07-11 18:55:18.387375: 
+epoch:  594 
+2020-07-11 18:58:54.782482: train loss : -0.8838 
+2020-07-11 18:59:11.114523: validation loss: -0.8974 
+2020-07-11 18:59:11.116426: Average global foreground Dice: [0.9628343651702078, 0.9638548862664452] 
+2020-07-11 18:59:11.117448: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 18:59:12.281541: lr: 0.004433 
+2020-07-11 18:59:12.326106: saving checkpoint... 
+2020-07-11 18:59:12.805857: done, saving took 0.52 seconds 
+2020-07-11 18:59:12.830217: This epoch took 234.442043 s
+ 
+2020-07-11 18:59:12.831017: 
+epoch:  595 
+2020-07-11 19:02:49.376559: train loss : -0.8887 
+2020-07-11 19:03:05.693873: validation loss: -0.8924 
+2020-07-11 19:03:05.695563: Average global foreground Dice: [0.9682351516719395, 0.9631153531132074] 
+2020-07-11 19:03:05.696418: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:03:06.865485: lr: 0.004423 
+2020-07-11 19:03:06.909651: saving checkpoint... 
+2020-07-11 19:03:07.380358: done, saving took 0.51 seconds 
+2020-07-11 19:03:07.405025: This epoch took 234.573286 s
+ 
+2020-07-11 19:03:07.405843: 
+epoch:  596 
+2020-07-11 19:06:43.811979: train loss : -0.8953 
+2020-07-11 19:07:00.132458: validation loss: -0.8906 
+2020-07-11 19:07:00.134166: Average global foreground Dice: [0.9670555274751786, 0.957162929839444] 
+2020-07-11 19:07:00.135109: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:07:01.302571: lr: 0.004413 
+2020-07-11 19:07:01.346940: saving checkpoint... 
+2020-07-11 19:07:01.900495: done, saving took 0.60 seconds 
+2020-07-11 19:07:01.940956: This epoch took 234.534415 s
+ 
+2020-07-11 19:07:01.942068: 
+epoch:  597 
+2020-07-11 19:10:38.473674: train loss : -0.8929 
+2020-07-11 19:10:54.735959: validation loss: -0.8891 
+2020-07-11 19:10:54.737609: Average global foreground Dice: [0.9660936190430189, 0.9588030344638947] 
+2020-07-11 19:10:54.738566: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:10:55.904011: lr: 0.004404 
+2020-07-11 19:10:55.948500: saving checkpoint... 
+2020-07-11 19:10:56.453012: done, saving took 0.55 seconds 
+2020-07-11 19:10:56.477696: This epoch took 234.534821 s
+ 
+2020-07-11 19:10:56.478519: 
+epoch:  598 
+2020-07-11 19:14:32.905858: train loss : -0.8833 
+2020-07-11 19:14:49.235654: validation loss: -0.8923 
+2020-07-11 19:14:49.237337: Average global foreground Dice: [0.9658046542649386, 0.9582001416803342] 
+2020-07-11 19:14:49.238306: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:14:50.402242: lr: 0.004394 
+2020-07-11 19:14:50.439759: saving checkpoint... 
+2020-07-11 19:14:51.024760: done, saving took 0.62 seconds 
+2020-07-11 19:14:51.048556: This epoch took 234.569362 s
+ 
+2020-07-11 19:14:51.049427: 
+epoch:  599 
+2020-07-11 19:18:27.404883: train loss : -0.8956 
+2020-07-11 19:18:43.788124: validation loss: -0.8944 
+2020-07-11 19:18:43.789827: Average global foreground Dice: [0.9659655570862408, 0.9626765339719617] 
+2020-07-11 19:18:43.790751: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:18:44.959282: lr: 0.004384 
+2020-07-11 19:18:44.960454: saving scheduled checkpoint file... 
+2020-07-11 19:18:44.996944: saving checkpoint... 
+2020-07-11 19:18:45.379793: done, saving took 0.42 seconds 
+2020-07-11 19:18:45.404601: done 
+2020-07-11 19:18:45.439661: saving checkpoint... 
+2020-07-11 19:18:45.901092: done, saving took 0.50 seconds 
+2020-07-11 19:18:45.926646: This epoch took 234.876469 s
+ 
+2020-07-11 19:18:45.927672: 
+epoch:  600 
+2020-07-11 19:22:22.351910: train loss : -0.8917 
+2020-07-11 19:22:38.744425: validation loss: -0.8897 
+2020-07-11 19:22:38.746033: Average global foreground Dice: [0.9663544212942308, 0.9598863635656635] 
+2020-07-11 19:22:38.747009: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:22:39.921723: lr: 0.004374 
+2020-07-11 19:22:39.958901: saving checkpoint... 
+2020-07-11 19:22:40.455535: done, saving took 0.53 seconds 
+2020-07-11 19:22:40.489743: This epoch took 234.561338 s
+ 
+2020-07-11 19:22:40.490752: 
+epoch:  601 
+2020-07-11 19:26:16.923581: train loss : -0.8907 
+2020-07-11 19:26:33.265164: validation loss: -0.8917 
+2020-07-11 19:26:33.266986: Average global foreground Dice: [0.9634122720132202, 0.9576338149493901] 
+2020-07-11 19:26:33.267893: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:26:34.447821: lr: 0.004364 
+2020-07-11 19:26:34.449006: This epoch took 233.957550 s
+ 
+2020-07-11 19:26:34.449696: 
+epoch:  602 
+2020-07-11 19:30:10.925359: train loss : -0.8836 
+2020-07-11 19:30:27.236467: validation loss: -0.8824 
+2020-07-11 19:30:27.238322: Average global foreground Dice: [0.9641915198117342, 0.9507172032050235] 
+2020-07-11 19:30:27.239333: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:30:28.405884: lr: 0.004354 
+2020-07-11 19:30:28.419403: This epoch took 233.969046 s
+ 
+2020-07-11 19:30:28.420267: 
+epoch:  603 
+2020-07-11 19:34:04.727418: train loss : -0.8817 
+2020-07-11 19:34:21.005590: validation loss: -0.8796 
+2020-07-11 19:34:21.007317: Average global foreground Dice: [0.963169175707922, 0.9563852770074516] 
+2020-07-11 19:34:21.008282: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:34:22.189981: lr: 0.004344 
+2020-07-11 19:34:22.191153: This epoch took 233.770167 s
+ 
+2020-07-11 19:34:22.191844: 
+epoch:  604 
+2020-07-11 19:37:58.652726: train loss : -0.8786 
+2020-07-11 19:38:14.944115: validation loss: -0.8777 
+2020-07-11 19:38:14.945793: Average global foreground Dice: [0.9638811302532646, 0.9601528131328858] 
+2020-07-11 19:38:14.946709: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:38:16.111250: lr: 0.004334 
+2020-07-11 19:38:16.112519: This epoch took 233.919932 s
+ 
+2020-07-11 19:38:16.113322: 
+epoch:  605 
+2020-07-11 19:41:52.489752: train loss : -0.8846 
+2020-07-11 19:42:08.784316: validation loss: -0.8777 
+2020-07-11 19:42:08.786005: Average global foreground Dice: [0.9557441766237247, 0.9531608466855379] 
+2020-07-11 19:42:08.787017: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:42:09.956125: lr: 0.004325 
+2020-07-11 19:42:09.957327: This epoch took 233.843345 s
+ 
+2020-07-11 19:42:09.958091: 
+epoch:  606 
+2020-07-11 19:45:46.393193: train loss : -0.8824 
+2020-07-11 19:46:02.687968: validation loss: -0.8696 
+2020-07-11 19:46:02.689787: Average global foreground Dice: [0.9683725080326023, 0.9535864496063894] 
+2020-07-11 19:46:02.690753: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:46:03.856505: lr: 0.004315 
+2020-07-11 19:46:03.857660: This epoch took 233.898902 s
+ 
+2020-07-11 19:46:03.858357: 
+epoch:  607 
+2020-07-11 19:49:40.241716: train loss : -0.8844 
+2020-07-11 19:49:56.547197: validation loss: -0.8889 
+2020-07-11 19:49:56.548928: Average global foreground Dice: [0.9637632450018698, 0.9582341005655853] 
+2020-07-11 19:49:56.549801: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:49:57.714627: lr: 0.004305 
+2020-07-11 19:49:57.715873: This epoch took 233.856721 s
+ 
+2020-07-11 19:49:57.716548: 
+epoch:  608 
+2020-07-11 19:53:34.169017: train loss : -0.8866 
+2020-07-11 19:53:50.449646: validation loss: -0.8799 
+2020-07-11 19:53:50.451330: Average global foreground Dice: [0.961800920246459, 0.959409531092217] 
+2020-07-11 19:53:50.452284: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:53:51.615604: lr: 0.004295 
+2020-07-11 19:53:51.616841: This epoch took 233.899566 s
+ 
+2020-07-11 19:53:51.617696: 
+epoch:  609 
+2020-07-11 19:57:27.960709: train loss : -0.8766 
+2020-07-11 19:57:44.224091: validation loss: -0.8634 
+2020-07-11 19:57:44.225765: Average global foreground Dice: [0.9627399227623176, 0.9533439602265756] 
+2020-07-11 19:57:44.226758: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 19:57:45.392069: lr: 0.004285 
+2020-07-11 19:57:45.393209: This epoch took 233.774875 s
+ 
+2020-07-11 19:57:45.393957: 
+epoch:  610 
+2020-07-11 20:01:21.694071: train loss : -0.8886 
+2020-07-11 20:01:37.962251: validation loss: -0.8774 
+2020-07-11 20:01:37.964075: Average global foreground Dice: [0.9650985606291482, 0.9554592189964576] 
+2020-07-11 20:01:37.965066: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:01:39.132013: lr: 0.004275 
+2020-07-11 20:01:39.145155: This epoch took 233.750461 s
+ 
+2020-07-11 20:01:39.146052: 
+epoch:  611 
+2020-07-11 20:05:15.467195: train loss : -0.8917 
+2020-07-11 20:05:31.750775: validation loss: -0.8906 
+2020-07-11 20:05:31.752407: Average global foreground Dice: [0.9660201358482541, 0.961366958901551] 
+2020-07-11 20:05:31.753390: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:05:32.918338: lr: 0.004265 
+2020-07-11 20:05:32.919733: This epoch took 233.772935 s
+ 
+2020-07-11 20:05:32.920533: 
+epoch:  612 
+2020-07-11 20:09:09.347394: train loss : -0.8747 
+2020-07-11 20:09:25.617606: validation loss: -0.8828 
+2020-07-11 20:09:25.619339: Average global foreground Dice: [0.9654318573698489, 0.957530232619106] 
+2020-07-11 20:09:25.620351: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:09:26.785214: lr: 0.004255 
+2020-07-11 20:09:26.786383: This epoch took 233.865155 s
+ 
+2020-07-11 20:09:26.787088: 
+epoch:  613 
+2020-07-11 20:13:03.066781: train loss : -0.8900 
+2020-07-11 20:13:19.330299: validation loss: -0.8962 
+2020-07-11 20:13:19.332009: Average global foreground Dice: [0.9651873695189201, 0.9627595698245732] 
+2020-07-11 20:13:19.332911: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:13:20.499143: lr: 0.004245 
+2020-07-11 20:13:20.500386: This epoch took 233.712673 s
+ 
+2020-07-11 20:13:20.501246: 
+epoch:  614 
+2020-07-11 20:16:56.902005: train loss : -0.8914 
+2020-07-11 20:17:13.146922: validation loss: -0.8803 
+2020-07-11 20:17:13.148744: Average global foreground Dice: [0.9656237671291079, 0.9600587712797899] 
+2020-07-11 20:17:13.149640: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:17:14.317644: lr: 0.004236 
+2020-07-11 20:17:14.318818: This epoch took 233.816916 s
+ 
+2020-07-11 20:17:14.319487: 
+epoch:  615 
+2020-07-11 20:20:50.666943: train loss : -0.8898 
+2020-07-11 20:21:06.972858: validation loss: -0.8924 
+2020-07-11 20:21:06.974577: Average global foreground Dice: [0.9630793344103928, 0.9639062086332068] 
+2020-07-11 20:21:06.975565: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:21:08.140718: lr: 0.004226 
+2020-07-11 20:21:08.154008: This epoch took 233.833910 s
+ 
+2020-07-11 20:21:08.154901: 
+epoch:  616 
+2020-07-11 20:24:44.643950: train loss : -0.8941 
+2020-07-11 20:25:00.954593: validation loss: -0.8924 
+2020-07-11 20:25:00.956308: Average global foreground Dice: [0.964490234801981, 0.9596137477379331] 
+2020-07-11 20:25:00.957234: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:25:02.122657: lr: 0.004216 
+2020-07-11 20:25:02.123877: This epoch took 233.968302 s
+ 
+2020-07-11 20:25:02.124606: 
+epoch:  617 
+2020-07-11 20:28:38.487820: train loss : -0.8900 
+2020-07-11 20:28:54.809139: validation loss: -0.8957 
+2020-07-11 20:28:54.810870: Average global foreground Dice: [0.9667508612178328, 0.9607430448845738] 
+2020-07-11 20:28:54.811816: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:28:55.992511: lr: 0.004206 
+2020-07-11 20:28:55.993651: This epoch took 233.868305 s
+ 
+2020-07-11 20:28:55.994285: 
+epoch:  618 
+2020-07-11 20:32:32.472368: train loss : -0.8867 
+2020-07-11 20:32:48.757324: validation loss: -0.8845 
+2020-07-11 20:32:48.759161: Average global foreground Dice: [0.9661313615010388, 0.9612868092944089] 
+2020-07-11 20:32:48.760152: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:32:49.938404: lr: 0.004196 
+2020-07-11 20:32:49.975445: saving checkpoint... 
+2020-07-11 20:32:50.581294: done, saving took 0.64 seconds 
+2020-07-11 20:32:50.605817: This epoch took 234.610872 s
+ 
+2020-07-11 20:32:50.606583: 
+epoch:  619 
+2020-07-11 20:36:27.007323: train loss : -0.8821 
+2020-07-11 20:36:43.281460: validation loss: -0.8815 
+2020-07-11 20:36:43.283146: Average global foreground Dice: [0.9637509872821466, 0.9562021180608832] 
+2020-07-11 20:36:43.284113: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:36:44.615794: lr: 0.004186 
+2020-07-11 20:36:44.616919: This epoch took 234.009700 s
+ 
+2020-07-11 20:36:44.617785: 
+epoch:  620 
+2020-07-11 20:40:20.969841: train loss : -0.8839 
+2020-07-11 20:40:37.277601: validation loss: -0.8877 
+2020-07-11 20:40:37.280967: Average global foreground Dice: [0.964201221546927, 0.9574010273442827] 
+2020-07-11 20:40:37.281906: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:40:38.446959: lr: 0.004176 
+2020-07-11 20:40:38.448151: This epoch took 233.829596 s
+ 
+2020-07-11 20:40:38.448869: 
+epoch:  621 
+2020-07-11 20:44:14.735486: train loss : -0.8787 
+2020-07-11 20:44:31.021188: validation loss: -0.8799 
+2020-07-11 20:44:31.022951: Average global foreground Dice: [0.963814570337422, 0.9533081828389062] 
+2020-07-11 20:44:31.023889: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:44:32.190414: lr: 0.004166 
+2020-07-11 20:44:32.191662: This epoch took 233.741997 s
+ 
+2020-07-11 20:44:32.192373: 
+epoch:  622 
+2020-07-11 20:48:08.574937: train loss : -0.8824 
+2020-07-11 20:48:24.842562: validation loss: -0.8854 
+2020-07-11 20:48:24.844334: Average global foreground Dice: [0.9635644742343169, 0.9600184154992318] 
+2020-07-11 20:48:24.845340: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:48:26.010937: lr: 0.004156 
+2020-07-11 20:48:26.012108: This epoch took 233.819110 s
+ 
+2020-07-11 20:48:26.012724: 
+epoch:  623 
+2020-07-11 20:52:02.318542: train loss : -0.8826 
+2020-07-11 20:52:18.601460: validation loss: -0.8766 
+2020-07-11 20:52:18.603162: Average global foreground Dice: [0.9637237886056453, 0.9560103690863122] 
+2020-07-11 20:52:18.604149: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:52:19.773372: lr: 0.004146 
+2020-07-11 20:52:19.774610: This epoch took 233.761113 s
+ 
+2020-07-11 20:52:19.775412: 
+epoch:  624 
+2020-07-11 20:55:56.173558: train loss : -0.8611 
+2020-07-11 20:56:12.444348: validation loss: -0.8624 
+2020-07-11 20:56:12.445936: Average global foreground Dice: [0.960622177331662, 0.9513020717022552] 
+2020-07-11 20:56:12.446865: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 20:56:13.611368: lr: 0.004136 
+2020-07-11 20:56:13.612545: This epoch took 233.836512 s
+ 
+2020-07-11 20:56:13.613215: 
+epoch:  625 
+2020-07-11 20:59:49.929552: train loss : -0.8685 
+2020-07-11 21:00:06.249814: validation loss: -0.8904 
+2020-07-11 21:00:06.251590: Average global foreground Dice: [0.9650719452334864, 0.9570400213171772] 
+2020-07-11 21:00:06.252448: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:00:07.419962: lr: 0.004127 
+2020-07-11 21:00:07.421155: This epoch took 233.807260 s
+ 
+2020-07-11 21:00:07.421849: 
+epoch:  626 
+2020-07-11 21:03:43.800345: train loss : -0.8734 
+2020-07-11 21:04:00.081809: validation loss: -0.8765 
+2020-07-11 21:04:00.083509: Average global foreground Dice: [0.9622494326417762, 0.9597157417109962] 
+2020-07-11 21:04:00.084461: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:04:01.257366: lr: 0.004117 
+2020-07-11 21:04:01.258852: This epoch took 233.836269 s
+ 
+2020-07-11 21:04:01.259641: 
+epoch:  627 
+2020-07-11 21:07:37.618244: train loss : -0.8807 
+2020-07-11 21:07:53.914110: validation loss: -0.8899 
+2020-07-11 21:07:53.915781: Average global foreground Dice: [0.9667359183962563, 0.9557373393091001] 
+2020-07-11 21:07:53.916776: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:07:55.080971: lr: 0.004107 
+2020-07-11 21:07:55.082253: This epoch took 233.821971 s
+ 
+2020-07-11 21:07:55.082953: 
+epoch:  628 
+2020-07-11 21:11:31.445954: train loss : -0.8785 
+2020-07-11 21:11:47.704230: validation loss: -0.8688 
+2020-07-11 21:11:47.705947: Average global foreground Dice: [0.9523131171982607, 0.949654394826918] 
+2020-07-11 21:11:47.706911: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:11:48.878905: lr: 0.004097 
+2020-07-11 21:11:48.880034: This epoch took 233.796380 s
+ 
+2020-07-11 21:11:48.880800: 
+epoch:  629 
+2020-07-11 21:15:25.172848: train loss : -0.8687 
+2020-07-11 21:15:41.454837: validation loss: -0.8796 
+2020-07-11 21:15:41.456601: Average global foreground Dice: [0.9619135842518749, 0.9502710086386957] 
+2020-07-11 21:15:41.457566: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:15:42.624670: lr: 0.004087 
+2020-07-11 21:15:42.625858: This epoch took 233.744386 s
+ 
+2020-07-11 21:15:42.626542: 
+epoch:  630 
+2020-07-11 21:19:18.976089: train loss : -0.8695 
+2020-07-11 21:19:35.257090: validation loss: -0.8832 
+2020-07-11 21:19:35.258777: Average global foreground Dice: [0.9637252230303587, 0.9580146993959748] 
+2020-07-11 21:19:35.259754: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:19:36.425226: lr: 0.004077 
+2020-07-11 21:19:36.426435: This epoch took 233.799178 s
+ 
+2020-07-11 21:19:36.427159: 
+epoch:  631 
+2020-07-11 21:23:12.696369: train loss : -0.8804 
+2020-07-11 21:23:28.991580: validation loss: -0.8778 
+2020-07-11 21:23:28.993256: Average global foreground Dice: [0.9630650943047977, 0.958813755001788] 
+2020-07-11 21:23:28.994288: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:23:30.158328: lr: 0.004067 
+2020-07-11 21:23:30.159534: This epoch took 233.731604 s
+ 
+2020-07-11 21:23:30.160272: 
+epoch:  632 
+2020-07-11 21:27:06.523263: train loss : -0.8600 
+2020-07-11 21:27:22.802863: validation loss: -0.8754 
+2020-07-11 21:27:22.804529: Average global foreground Dice: [0.962526867533518, 0.9538116690917096] 
+2020-07-11 21:27:22.807012: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:27:23.968424: lr: 0.004057 
+2020-07-11 21:27:23.969417: This epoch took 233.808452 s
+ 
+2020-07-11 21:27:23.970013: 
+epoch:  633 
+2020-07-11 21:31:00.283084: train loss : -0.8701 
+2020-07-11 21:31:16.566308: validation loss: -0.8709 
+2020-07-11 21:31:16.568144: Average global foreground Dice: [0.96215234981954, 0.9539618046491684] 
+2020-07-11 21:31:16.569066: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:31:17.733614: lr: 0.004047 
+2020-07-11 21:31:17.734855: This epoch took 233.764234 s
+ 
+2020-07-11 21:31:17.735652: 
+epoch:  634 
+2020-07-11 21:34:54.161351: train loss : -0.8462 
+2020-07-11 21:35:10.439328: validation loss: -0.8575 
+2020-07-11 21:35:10.441025: Average global foreground Dice: [0.9510770780908228, 0.942327204580388] 
+2020-07-11 21:35:10.441913: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:35:11.621231: lr: 0.004037 
+2020-07-11 21:35:11.622438: This epoch took 233.886080 s
+ 
+2020-07-11 21:35:11.623199: 
+epoch:  635 
+2020-07-11 21:38:48.019223: train loss : -0.8709 
+2020-07-11 21:39:04.323687: validation loss: -0.8789 
+2020-07-11 21:39:04.325364: Average global foreground Dice: [0.9605467783952266, 0.9552165324823986] 
+2020-07-11 21:39:04.326372: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:39:05.505882: lr: 0.004027 
+2020-07-11 21:39:05.507033: This epoch took 233.883065 s
+ 
+2020-07-11 21:39:05.507685: 
+epoch:  636 
+2020-07-11 21:42:41.971527: train loss : -0.8731 
+2020-07-11 21:42:58.271982: validation loss: -0.8718 
+2020-07-11 21:42:58.273712: Average global foreground Dice: [0.9571865049736153, 0.9548269748084175] 
+2020-07-11 21:42:58.274618: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:42:59.439861: lr: 0.004017 
+2020-07-11 21:42:59.440975: This epoch took 233.932625 s
+ 
+2020-07-11 21:42:59.441783: 
+epoch:  637 
+2020-07-11 21:46:35.776679: train loss : -0.8738 
+2020-07-11 21:46:52.049704: validation loss: -0.8723 
+2020-07-11 21:46:52.051438: Average global foreground Dice: [0.9582864589000636, 0.9517174802363466] 
+2020-07-11 21:46:52.052329: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:46:53.218380: lr: 0.004007 
+2020-07-11 21:46:53.219692: This epoch took 233.777259 s
+ 
+2020-07-11 21:46:53.220584: 
+epoch:  638 
+2020-07-11 21:50:29.743977: train loss : -0.8651 
+2020-07-11 21:50:46.013624: validation loss: -0.8773 
+2020-07-11 21:50:46.015383: Average global foreground Dice: [0.9620327063536144, 0.9565524745155916] 
+2020-07-11 21:50:46.016344: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:50:47.181957: lr: 0.003997 
+2020-07-11 21:50:47.183106: This epoch took 233.961860 s
+ 
+2020-07-11 21:50:47.183809: 
+epoch:  639 
+2020-07-11 21:54:23.519675: train loss : -0.8686 
+2020-07-11 21:54:39.779691: validation loss: -0.8830 
+2020-07-11 21:54:39.781415: Average global foreground Dice: [0.9627911742278001, 0.9591083354149617] 
+2020-07-11 21:54:39.782365: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:54:40.949912: lr: 0.003987 
+2020-07-11 21:54:40.951033: This epoch took 233.766519 s
+ 
+2020-07-11 21:54:40.951876: 
+epoch:  640 
+2020-07-11 21:58:17.410011: train loss : -0.8647 
+2020-07-11 21:58:33.673317: validation loss: -0.8744 
+2020-07-11 21:58:33.675060: Average global foreground Dice: [0.9626679046412965, 0.9545143109788287] 
+2020-07-11 21:58:33.676023: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 21:58:34.847312: lr: 0.003977 
+2020-07-11 21:58:34.848508: This epoch took 233.895965 s
+ 
+2020-07-11 21:58:34.849278: 
+epoch:  641 
+2020-07-11 22:02:11.207057: train loss : -0.8749 
+2020-07-11 22:02:27.500551: validation loss: -0.8823 
+2020-07-11 22:02:27.502347: Average global foreground Dice: [0.960016454213768, 0.9548380843888954] 
+2020-07-11 22:02:27.503184: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:02:28.672999: lr: 0.003967 
+2020-07-11 22:02:28.674185: This epoch took 233.824207 s
+ 
+2020-07-11 22:02:28.674915: 
+epoch:  642 
+2020-07-11 22:06:05.091256: train loss : -0.8817 
+2020-07-11 22:06:21.361883: validation loss: -0.8621 
+2020-07-11 22:06:21.363575: Average global foreground Dice: [0.965437359966635, 0.9533268891511015] 
+2020-07-11 22:06:21.364513: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:06:22.528249: lr: 0.003957 
+2020-07-11 22:06:22.529408: This epoch took 233.853889 s
+ 
+2020-07-11 22:06:22.530218: 
+epoch:  643 
+2020-07-11 22:09:58.849858: train loss : -0.8830 
+2020-07-11 22:10:15.160484: validation loss: -0.8784 
+2020-07-11 22:10:15.162267: Average global foreground Dice: [0.9633794370031528, 0.9573192823898454] 
+2020-07-11 22:10:15.163271: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:10:16.327539: lr: 0.003947 
+2020-07-11 22:10:16.328718: This epoch took 233.797855 s
+ 
+2020-07-11 22:10:16.329398: 
+epoch:  644 
+2020-07-11 22:13:52.695814: train loss : -0.8540 
+2020-07-11 22:14:08.981432: validation loss: -0.8667 
+2020-07-11 22:14:08.983178: Average global foreground Dice: [0.9607791931393088, 0.9527676437095676] 
+2020-07-11 22:14:08.984123: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:14:10.152446: lr: 0.003937 
+2020-07-11 22:14:10.153599: This epoch took 233.823600 s
+ 
+2020-07-11 22:14:10.154396: 
+epoch:  645 
+2020-07-11 22:17:46.480353: train loss : -0.8684 
+2020-07-11 22:18:02.797656: validation loss: -0.8753 
+2020-07-11 22:18:02.799438: Average global foreground Dice: [0.9613119125979095, 0.9572223666913289] 
+2020-07-11 22:18:02.800432: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:18:03.967687: lr: 0.003927 
+2020-07-11 22:18:03.968809: This epoch took 233.813714 s
+ 
+2020-07-11 22:18:03.969563: 
+epoch:  646 
+2020-07-11 22:21:40.390632: train loss : -0.8828 
+2020-07-11 22:21:56.660782: validation loss: -0.8707 
+2020-07-11 22:21:56.662508: Average global foreground Dice: [0.9625696603059681, 0.9573915670961815] 
+2020-07-11 22:21:56.663383: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:21:57.830394: lr: 0.003917 
+2020-07-11 22:21:57.831683: This epoch took 233.861408 s
+ 
+2020-07-11 22:21:57.832360: 
+epoch:  647 
+2020-07-11 22:25:34.127240: train loss : -0.8794 
+2020-07-11 22:25:50.409559: validation loss: -0.8825 
+2020-07-11 22:25:50.411278: Average global foreground Dice: [0.9643086395570252, 0.9553837308182966] 
+2020-07-11 22:25:50.412153: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:25:51.579196: lr: 0.003907 
+2020-07-11 22:25:51.580380: This epoch took 233.747190 s
+ 
+2020-07-11 22:25:51.581031: 
+epoch:  648 
+2020-07-11 22:29:27.978487: train loss : -0.8841 
+2020-07-11 22:29:44.232976: validation loss: -0.8850 
+2020-07-11 22:29:44.234776: Average global foreground Dice: [0.9647784214980976, 0.9601226152773206] 
+2020-07-11 22:29:44.235741: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:29:45.404194: lr: 0.003897 
+2020-07-11 22:29:45.405265: This epoch took 233.823510 s
+ 
+2020-07-11 22:29:45.405900: 
+epoch:  649 
+2020-07-11 22:33:21.753207: train loss : -0.8824 
+2020-07-11 22:33:38.006696: validation loss: -0.8807 
+2020-07-11 22:33:38.008327: Average global foreground Dice: [0.9590857591446773, 0.9564151346298136] 
+2020-07-11 22:33:38.009269: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:33:39.173132: lr: 0.003887 
+2020-07-11 22:33:39.174282: saving scheduled checkpoint file... 
+2020-07-11 22:33:39.211245: saving checkpoint... 
+2020-07-11 22:33:39.684349: done, saving took 0.51 seconds 
+2020-07-11 22:33:39.708110: done 
+2020-07-11 22:33:39.708822: This epoch took 234.302341 s
+ 
+2020-07-11 22:33:39.709378: 
+epoch:  650 
+2020-07-11 22:37:16.019404: train loss : -0.8817 
+2020-07-11 22:37:32.281907: validation loss: -0.8759 
+2020-07-11 22:37:32.283626: Average global foreground Dice: [0.9638581138606921, 0.9574519910840807] 
+2020-07-11 22:37:32.284448: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:37:33.450861: lr: 0.003877 
+2020-07-11 22:37:33.452084: This epoch took 233.742161 s
+ 
+2020-07-11 22:37:33.452897: 
+epoch:  651 
+2020-07-11 22:41:09.817023: train loss : -0.8806 
+2020-07-11 22:41:26.092007: validation loss: -0.8847 
+2020-07-11 22:41:26.093697: Average global foreground Dice: [0.9635358455633672, 0.9586518279094821] 
+2020-07-11 22:41:26.094799: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:41:27.275137: lr: 0.003867 
+2020-07-11 22:41:27.276445: This epoch took 233.822713 s
+ 
+2020-07-11 22:41:27.277173: 
+epoch:  652 
+2020-07-11 22:45:03.738014: train loss : -0.8885 
+2020-07-11 22:45:20.009535: validation loss: -0.8831 
+2020-07-11 22:45:20.011330: Average global foreground Dice: [0.9592914085161277, 0.9574162770980638] 
+2020-07-11 22:45:20.012158: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:45:21.188108: lr: 0.003857 
+2020-07-11 22:45:21.189343: This epoch took 233.911338 s
+ 
+2020-07-11 22:45:21.189970: 
+epoch:  653 
+2020-07-11 22:48:57.482831: train loss : -0.8861 
+2020-07-11 22:49:13.773827: validation loss: -0.8822 
+2020-07-11 22:49:13.775674: Average global foreground Dice: [0.965218971226725, 0.9602007291764496] 
+2020-07-11 22:49:13.776670: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:49:14.943770: lr: 0.003847 
+2020-07-11 22:49:14.945134: This epoch took 233.754565 s
+ 
+2020-07-11 22:49:14.945911: 
+epoch:  654 
+2020-07-11 22:52:51.367438: train loss : -0.8914 
+2020-07-11 22:53:07.642202: validation loss: -0.8822 
+2020-07-11 22:53:07.643859: Average global foreground Dice: [0.9667029261988556, 0.9574583525487163] 
+2020-07-11 22:53:07.644764: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:53:08.809268: lr: 0.003837 
+2020-07-11 22:53:08.810410: This epoch took 233.863819 s
+ 
+2020-07-11 22:53:08.811100: 
+epoch:  655 
+2020-07-11 22:56:45.061112: train loss : -0.8906 
+2020-07-11 22:57:01.341437: validation loss: -0.8847 
+2020-07-11 22:57:01.343156: Average global foreground Dice: [0.9672711400634413, 0.9567842200350807] 
+2020-07-11 22:57:01.344087: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 22:57:02.511952: lr: 0.003827 
+2020-07-11 22:57:02.513172: This epoch took 233.701471 s
+ 
+2020-07-11 22:57:02.513971: 
+epoch:  656 
+2020-07-11 23:00:38.866298: train loss : -0.8852 
+2020-07-11 23:00:55.149831: validation loss: -0.8816 
+2020-07-11 23:00:55.151503: Average global foreground Dice: [0.962319854884093, 0.9580255336072555] 
+2020-07-11 23:00:55.152454: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:00:56.317361: lr: 0.003817 
+2020-07-11 23:00:56.318495: This epoch took 233.803884 s
+ 
+2020-07-11 23:00:56.319136: 
+epoch:  657 
+2020-07-11 23:04:32.668537: train loss : -0.8822 
+2020-07-11 23:04:48.966085: validation loss: -0.8965 
+2020-07-11 23:04:48.967761: Average global foreground Dice: [0.9668228646405935, 0.9621497502135045] 
+2020-07-11 23:04:48.968676: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:04:50.136492: lr: 0.003807 
+2020-07-11 23:04:50.137633: This epoch took 233.817725 s
+ 
+2020-07-11 23:04:50.138376: 
+epoch:  658 
+2020-07-11 23:08:26.440928: train loss : -0.8877 
+2020-07-11 23:08:42.725922: validation loss: -0.8927 
+2020-07-11 23:08:42.727623: Average global foreground Dice: [0.9645197363739099, 0.9594924772909719] 
+2020-07-11 23:08:42.728516: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:08:43.895754: lr: 0.003797 
+2020-07-11 23:08:43.896903: This epoch took 233.757746 s
+ 
+2020-07-11 23:08:43.897695: 
+epoch:  659 
+2020-07-11 23:12:20.168069: train loss : -0.8911 
+2020-07-11 23:12:36.437910: validation loss: -0.8794 
+2020-07-11 23:12:36.439565: Average global foreground Dice: [0.9614844889875072, 0.9562690405048866] 
+2020-07-11 23:12:36.440516: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:12:37.626292: lr: 0.003787 
+2020-07-11 23:12:37.641560: This epoch took 233.743159 s
+ 
+2020-07-11 23:12:37.642498: 
+epoch:  660 
+2020-07-11 23:16:14.085822: train loss : -0.8893 
+2020-07-11 23:16:30.377815: validation loss: -0.8878 
+2020-07-11 23:16:30.379600: Average global foreground Dice: [0.9630330570455915, 0.9617925500825941] 
+2020-07-11 23:16:30.380511: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:16:31.543627: lr: 0.003777 
+2020-07-11 23:16:31.544877: This epoch took 233.901629 s
+ 
+2020-07-11 23:16:31.545556: 
+epoch:  661 
+2020-07-11 23:20:07.887737: train loss : -0.8883 
+2020-07-11 23:20:24.149856: validation loss: -0.8834 
+2020-07-11 23:20:24.151607: Average global foreground Dice: [0.9620619263101956, 0.9605007145741995] 
+2020-07-11 23:20:24.152608: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:20:25.319016: lr: 0.003767 
+2020-07-11 23:20:25.320209: This epoch took 233.773986 s
+ 
+2020-07-11 23:20:25.320925: 
+epoch:  662 
+2020-07-11 23:24:01.688840: train loss : -0.8922 
+2020-07-11 23:24:17.944912: validation loss: -0.8930 
+2020-07-11 23:24:17.946577: Average global foreground Dice: [0.9683440232406093, 0.9601899340821172] 
+2020-07-11 23:24:17.947491: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:24:19.111809: lr: 0.003757 
+2020-07-11 23:24:19.113070: This epoch took 233.791420 s
+ 
+2020-07-11 23:24:19.113870: 
+epoch:  663 
+2020-07-11 23:27:55.471508: train loss : -0.8911 
+2020-07-11 23:28:11.745723: validation loss: -0.8825 
+2020-07-11 23:28:11.747452: Average global foreground Dice: [0.9650988950788554, 0.9600574143093761] 
+2020-07-11 23:28:11.748426: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:28:12.912887: lr: 0.003747 
+2020-07-11 23:28:12.914214: This epoch took 233.799699 s
+ 
+2020-07-11 23:28:12.914907: 
+epoch:  664 
+2020-07-11 23:31:49.311574: train loss : -0.8900 
+2020-07-11 23:32:05.557452: validation loss: -0.8782 
+2020-07-11 23:32:05.559285: Average global foreground Dice: [0.968318793955846, 0.9560508484493149] 
+2020-07-11 23:32:05.560243: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:32:06.731245: lr: 0.003737 
+2020-07-11 23:32:06.732444: This epoch took 233.816840 s
+ 
+2020-07-11 23:32:06.733371: 
+epoch:  665 
+2020-07-11 23:35:43.112869: train loss : -0.8907 
+2020-07-11 23:35:59.426375: validation loss: -0.8938 
+2020-07-11 23:35:59.428039: Average global foreground Dice: [0.9659165327913161, 0.9607675940824316] 
+2020-07-11 23:35:59.428916: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:36:00.595094: lr: 0.003727 
+2020-07-11 23:36:00.596294: This epoch took 233.862158 s
+ 
+2020-07-11 23:36:00.596917: 
+epoch:  666 
+2020-07-11 23:39:37.010687: train loss : -0.8935 
+2020-07-11 23:39:53.276957: validation loss: -0.8885 
+2020-07-11 23:39:53.278623: Average global foreground Dice: [0.9640871256017941, 0.9573346156827715] 
+2020-07-11 23:39:53.279593: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:39:54.446239: lr: 0.003717 
+2020-07-11 23:39:54.459812: This epoch took 233.862304 s
+ 
+2020-07-11 23:39:54.460631: 
+epoch:  667 
+2020-07-11 23:43:30.781748: train loss : -0.8900 
+2020-07-11 23:43:47.048331: validation loss: -0.8898 
+2020-07-11 23:43:47.050069: Average global foreground Dice: [0.9658833635770658, 0.9607447392190321] 
+2020-07-11 23:43:47.050940: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:43:48.217563: lr: 0.003707 
+2020-07-11 23:43:48.230782: This epoch took 233.769351 s
+ 
+2020-07-11 23:43:48.231736: 
+epoch:  668 
+2020-07-11 23:47:24.613751: train loss : -0.8956 
+2020-07-11 23:47:40.890926: validation loss: -0.8929 
+2020-07-11 23:47:40.892732: Average global foreground Dice: [0.9668719257093956, 0.9592515088751012] 
+2020-07-11 23:47:40.893719: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:47:42.077412: lr: 0.003697 
+2020-07-11 23:47:42.078609: This epoch took 233.846036 s
+ 
+2020-07-11 23:47:42.079433: 
+epoch:  669 
+2020-07-11 23:51:18.422419: train loss : -0.8950 
+2020-07-11 23:51:34.727283: validation loss: -0.8921 
+2020-07-11 23:51:34.728981: Average global foreground Dice: [0.9649674853383551, 0.9548913620485191] 
+2020-07-11 23:51:34.729959: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:51:35.909663: lr: 0.003687 
+2020-07-11 23:51:35.910958: This epoch took 233.830786 s
+ 
+2020-07-11 23:51:35.911677: 
+epoch:  670 
+2020-07-11 23:55:12.279717: train loss : -0.8906 
+2020-07-11 23:55:28.558473: validation loss: -0.8931 
+2020-07-11 23:55:28.560172: Average global foreground Dice: [0.9645818057025577, 0.958832039263712] 
+2020-07-11 23:55:28.561101: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:55:29.729568: lr: 0.003677 
+2020-07-11 23:55:29.730887: This epoch took 233.818609 s
+ 
+2020-07-11 23:55:29.731905: 
+epoch:  671 
+2020-07-11 23:59:06.045588: train loss : -0.8965 
+2020-07-11 23:59:22.315123: validation loss: -0.8946 
+2020-07-11 23:59:22.317308: Average global foreground Dice: [0.9660992109620586, 0.9596855721905975] 
+2020-07-11 23:59:22.318405: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-11 23:59:23.503083: lr: 0.003667 
+2020-07-11 23:59:23.519462: This epoch took 233.786916 s
+ 
+2020-07-11 23:59:23.520389: 
+epoch:  672 
+2020-07-12 00:02:59.875505: train loss : -0.8944 
+2020-07-12 00:03:16.144771: validation loss: -0.8913 
+2020-07-12 00:03:16.146544: Average global foreground Dice: [0.9657633162810979, 0.9592893470553788] 
+2020-07-12 00:03:16.147540: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:03:17.352679: lr: 0.003657 
+2020-07-12 00:03:17.368600: This epoch took 233.847471 s
+ 
+2020-07-12 00:03:17.369417: 
+epoch:  673 
+2020-07-12 00:06:53.693413: train loss : -0.8972 
+2020-07-12 00:07:09.949301: validation loss: -0.8914 
+2020-07-12 00:07:09.950982: Average global foreground Dice: [0.9694181743115988, 0.9589687647283404] 
+2020-07-12 00:07:09.951895: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:07:11.119624: lr: 0.003647 
+2020-07-12 00:07:11.157177: saving checkpoint... 
+2020-07-12 00:07:12.588944: done, saving took 1.47 seconds 
+2020-07-12 00:07:12.620111: This epoch took 235.250077 s
+ 
+2020-07-12 00:07:12.620907: 
+epoch:  674 
+2020-07-12 00:10:48.851068: train loss : -0.8972 
+2020-07-12 00:11:05.140125: validation loss: -0.8982 
+2020-07-12 00:11:05.141838: Average global foreground Dice: [0.9630234492915029, 0.9640062841727093] 
+2020-07-12 00:11:05.142705: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:11:06.310701: lr: 0.003637 
+2020-07-12 00:11:06.347410: saving checkpoint... 
+2020-07-12 00:11:07.757802: done, saving took 1.45 seconds 
+2020-07-12 00:11:07.786186: This epoch took 235.164637 s
+ 
+2020-07-12 00:11:07.787068: 
+epoch:  675 
+2020-07-12 00:14:44.060865: train loss : -0.8933 
+2020-07-12 00:15:00.355410: validation loss: -0.8960 
+2020-07-12 00:15:00.357256: Average global foreground Dice: [0.968893231721413, 0.9594645043635277] 
+2020-07-12 00:15:00.358182: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:15:01.610633: lr: 0.003627 
+2020-07-12 00:15:01.647807: saving checkpoint... 
+2020-07-12 00:15:03.060910: done, saving took 1.45 seconds 
+2020-07-12 00:15:03.107231: This epoch took 235.319262 s
+ 
+2020-07-12 00:15:03.108366: 
+epoch:  676 
+2020-07-12 00:18:39.342796: train loss : -0.8925 
+2020-07-12 00:18:55.633635: validation loss: -0.8864 
+2020-07-12 00:18:55.635433: Average global foreground Dice: [0.9644091984869766, 0.9619671393345767] 
+2020-07-12 00:18:55.636416: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:18:56.802458: lr: 0.003616 
+2020-07-12 00:18:56.839895: saving checkpoint... 
+2020-07-12 00:18:58.249682: done, saving took 1.45 seconds 
+2020-07-12 00:18:58.286151: This epoch took 235.177035 s
+ 
+2020-07-12 00:18:58.287151: 
+epoch:  677 
+2020-07-12 00:22:34.649650: train loss : -0.8896 
+2020-07-12 00:22:50.907082: validation loss: -0.8892 
+2020-07-12 00:22:50.908646: Average global foreground Dice: [0.9654008949648604, 0.9565771091402986] 
+2020-07-12 00:22:50.909585: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:22:52.071234: lr: 0.003606 
+2020-07-12 00:22:52.072384: This epoch took 233.784389 s
+ 
+2020-07-12 00:22:52.073159: 
+epoch:  678 
+2020-07-12 00:26:28.289288: train loss : -0.8955 
+2020-07-12 00:26:44.541655: validation loss: -0.8846 
+2020-07-12 00:26:44.543645: Average global foreground Dice: [0.970009268858143, 0.9581340745681887] 
+2020-07-12 00:26:44.544755: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:26:45.729405: lr: 0.003596 
+2020-07-12 00:26:45.766690: saving checkpoint... 
+2020-07-12 00:26:47.139374: done, saving took 1.41 seconds 
+2020-07-12 00:26:47.177070: This epoch took 235.103165 s
+ 
+2020-07-12 00:26:47.178020: 
+epoch:  679 
+2020-07-12 00:30:23.529256: train loss : -0.8926 
+2020-07-12 00:30:39.803735: validation loss: -0.8860 
+2020-07-12 00:30:39.805503: Average global foreground Dice: [0.9675911154368747, 0.958652536061768] 
+2020-07-12 00:30:39.806482: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:30:40.970868: lr: 0.003586 
+2020-07-12 00:30:41.007801: saving checkpoint... 
+2020-07-12 00:30:42.328312: done, saving took 1.36 seconds 
+2020-07-12 00:30:42.361347: This epoch took 235.182509 s
+ 
+2020-07-12 00:30:42.362376: 
+epoch:  680 
+2020-07-12 00:34:18.676248: train loss : -0.8954 
+2020-07-12 00:34:34.959160: validation loss: -0.8971 
+2020-07-12 00:34:34.960906: Average global foreground Dice: [0.9652351622625286, 0.9626188717903829] 
+2020-07-12 00:34:34.961803: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:34:36.131783: lr: 0.003576 
+2020-07-12 00:34:36.169177: saving checkpoint... 
+2020-07-12 00:34:37.669768: done, saving took 1.54 seconds 
+2020-07-12 00:34:37.696145: This epoch took 235.333021 s
+ 
+2020-07-12 00:34:37.696950: 
+epoch:  681 
+2020-07-12 00:38:14.112814: train loss : -0.8903 
+2020-07-12 00:38:30.371346: validation loss: -0.8859 
+2020-07-12 00:38:30.373018: Average global foreground Dice: [0.9675746082834998, 0.9556029897786505] 
+2020-07-12 00:38:30.373911: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:38:31.539904: lr: 0.003566 
+2020-07-12 00:38:31.541063: This epoch took 233.843430 s
+ 
+2020-07-12 00:38:31.541731: 
+epoch:  682 
+2020-07-12 00:42:07.805663: train loss : -0.8968 
+2020-07-12 00:42:24.082286: validation loss: -0.8936 
+2020-07-12 00:42:24.083934: Average global foreground Dice: [0.9654931675084857, 0.9584932424001471] 
+2020-07-12 00:42:24.084668: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:42:25.253247: lr: 0.003556 
+2020-07-12 00:42:25.254418: This epoch took 233.711909 s
+ 
+2020-07-12 00:42:25.255169: 
+epoch:  683 
+2020-07-12 00:46:01.535264: train loss : -0.8871 
+2020-07-12 00:46:17.811745: validation loss: -0.8814 
+2020-07-12 00:46:17.813559: Average global foreground Dice: [0.962056062598838, 0.9559382410750482] 
+2020-07-12 00:46:17.814551: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:46:18.982346: lr: 0.003546 
+2020-07-12 00:46:18.983643: This epoch took 233.727772 s
+ 
+2020-07-12 00:46:18.984434: 
+epoch:  684 
+2020-07-12 00:49:55.298753: train loss : -0.8852 
+2020-07-12 00:50:11.646976: validation loss: -0.8870 
+2020-07-12 00:50:11.648768: Average global foreground Dice: [0.9654098617613385, 0.959760316463749] 
+2020-07-12 00:50:11.649709: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:50:12.820592: lr: 0.003536 
+2020-07-12 00:50:12.821923: This epoch took 233.836791 s
+ 
+2020-07-12 00:50:12.822647: 
+epoch:  685 
+2020-07-12 00:53:49.239870: train loss : -0.8904 
+2020-07-12 00:54:05.551071: validation loss: -0.8881 
+2020-07-12 00:54:05.552775: Average global foreground Dice: [0.9620732468793997, 0.9570187714403355] 
+2020-07-12 00:54:05.553753: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:54:06.733929: lr: 0.003526 
+2020-07-12 00:54:06.735055: This epoch took 233.911785 s
+ 
+2020-07-12 00:54:06.735765: 
+epoch:  686 
+2020-07-12 00:57:43.061280: train loss : -0.8774 
+2020-07-12 00:57:59.344849: validation loss: -0.8936 
+2020-07-12 00:57:59.346516: Average global foreground Dice: [0.9639880347633918, 0.95926364355655] 
+2020-07-12 00:57:59.347493: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 00:58:00.525502: lr: 0.003516 
+2020-07-12 00:58:00.526708: This epoch took 233.790247 s
+ 
+2020-07-12 00:58:00.527523: 
+epoch:  687 
+2020-07-12 01:01:36.869948: train loss : -0.8850 
+2020-07-12 01:01:53.131063: validation loss: -0.8874 
+2020-07-12 01:01:53.132953: Average global foreground Dice: [0.9643513799621884, 0.9563424758639343] 
+2020-07-12 01:01:53.133881: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:01:54.303711: lr: 0.003505 
+2020-07-12 01:01:54.304861: This epoch took 233.776618 s
+ 
+2020-07-12 01:01:54.305524: 
+epoch:  688 
+2020-07-12 01:05:30.570019: train loss : -0.8849 
+2020-07-12 01:05:46.847651: validation loss: -0.8875 
+2020-07-12 01:05:46.849428: Average global foreground Dice: [0.9662002617859788, 0.958307225586212] 
+2020-07-12 01:05:46.850440: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:05:48.192002: lr: 0.003495 
+2020-07-12 01:05:48.193209: This epoch took 233.887082 s
+ 
+2020-07-12 01:05:48.193989: 
+epoch:  689 
+2020-07-12 01:09:24.549376: train loss : -0.8899 
+2020-07-12 01:09:40.832099: validation loss: -0.8971 
+2020-07-12 01:09:40.833820: Average global foreground Dice: [0.9672334329637737, 0.9609214222350608] 
+2020-07-12 01:09:40.834803: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:09:42.001742: lr: 0.003485 
+2020-07-12 01:09:42.002889: This epoch took 233.808171 s
+ 
+2020-07-12 01:09:42.003523: 
+epoch:  690 
+2020-07-12 01:13:18.330667: train loss : -0.8966 
+2020-07-12 01:13:34.639757: validation loss: -0.8968 
+2020-07-12 01:13:34.641430: Average global foreground Dice: [0.9690332070804233, 0.9613841372329189] 
+2020-07-12 01:13:34.642426: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:13:35.812248: lr: 0.003475 
+2020-07-12 01:13:35.813383: This epoch took 233.809259 s
+ 
+2020-07-12 01:13:35.814129: 
+epoch:  691 
+2020-07-12 01:17:12.147870: train loss : -0.8914 
+2020-07-12 01:17:28.467492: validation loss: -0.8983 
+2020-07-12 01:17:28.469246: Average global foreground Dice: [0.9684430612842377, 0.9622199090504043] 
+2020-07-12 01:17:28.470162: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:17:29.640646: lr: 0.003465 
+2020-07-12 01:17:29.641796: This epoch took 233.827050 s
+ 
+2020-07-12 01:17:29.642609: 
+epoch:  692 
+2020-07-12 01:21:05.863437: train loss : -0.8905 
+2020-07-12 01:21:22.135979: validation loss: -0.8832 
+2020-07-12 01:21:22.137644: Average global foreground Dice: [0.9654119703984604, 0.9529733421207776] 
+2020-07-12 01:21:22.138502: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:21:23.308781: lr: 0.003455 
+2020-07-12 01:21:23.309900: This epoch took 233.666614 s
+ 
+2020-07-12 01:21:23.310727: 
+epoch:  693 
+2020-07-12 01:24:59.685327: train loss : -0.8793 
+2020-07-12 01:25:15.970077: validation loss: -0.8778 
+2020-07-12 01:25:15.971836: Average global foreground Dice: [0.9653267513666596, 0.9542290485793202] 
+2020-07-12 01:25:15.972877: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:25:17.144329: lr: 0.003445 
+2020-07-12 01:25:17.145655: This epoch took 233.834297 s
+ 
+2020-07-12 01:25:17.146420: 
+epoch:  694 
+2020-07-12 01:28:53.430259: train loss : -0.8856 
+2020-07-12 01:29:09.689573: validation loss: -0.8948 
+2020-07-12 01:29:09.691270: Average global foreground Dice: [0.9660087459662607, 0.9594677402168682] 
+2020-07-12 01:29:09.692211: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:29:10.860907: lr: 0.003435 
+2020-07-12 01:29:10.862115: This epoch took 233.715018 s
+ 
+2020-07-12 01:29:10.862823: 
+epoch:  695 
+2020-07-12 01:32:47.219101: train loss : -0.8905 
+2020-07-12 01:33:03.494695: validation loss: -0.8958 
+2020-07-12 01:33:03.496437: Average global foreground Dice: [0.9658992635274413, 0.9604305850678491] 
+2020-07-12 01:33:03.497388: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:33:04.668318: lr: 0.003424 
+2020-07-12 01:33:04.669462: This epoch took 233.805991 s
+ 
+2020-07-12 01:33:04.670303: 
+epoch:  696 
+2020-07-12 01:36:40.944494: train loss : -0.8907 
+2020-07-12 01:36:57.233593: validation loss: -0.8847 
+2020-07-12 01:36:57.235275: Average global foreground Dice: [0.9667569920392903, 0.9567114253251997] 
+2020-07-12 01:36:57.236151: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:36:58.407696: lr: 0.003414 
+2020-07-12 01:36:58.408875: This epoch took 233.737911 s
+ 
+2020-07-12 01:36:58.409650: 
+epoch:  697 
+2020-07-12 01:40:34.731318: train loss : -0.8933 
+2020-07-12 01:40:51.035114: validation loss: -0.8864 
+2020-07-12 01:40:51.036828: Average global foreground Dice: [0.9646696781018699, 0.9577698512153255] 
+2020-07-12 01:40:51.037794: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:40:52.209770: lr: 0.003404 
+2020-07-12 01:40:52.210976: This epoch took 233.800624 s
+ 
+2020-07-12 01:40:52.211758: 
+epoch:  698 
+2020-07-12 01:44:28.571844: train loss : -0.8699 
+2020-07-12 01:44:44.846743: validation loss: -0.8692 
+2020-07-12 01:44:44.848386: Average global foreground Dice: [0.9611977701468049, 0.9545162898153704] 
+2020-07-12 01:44:44.849378: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:44:46.016725: lr: 0.003394 
+2020-07-12 01:44:46.017986: This epoch took 233.805561 s
+ 
+2020-07-12 01:44:46.018676: 
+epoch:  699 
+2020-07-12 01:48:22.476103: train loss : -0.8868 
+2020-07-12 01:48:38.738859: validation loss: -0.8779 
+2020-07-12 01:48:38.740680: Average global foreground Dice: [0.9594555341582723, 0.9542924505706657] 
+2020-07-12 01:48:38.741674: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:48:39.910099: lr: 0.003384 
+2020-07-12 01:48:39.911313: saving scheduled checkpoint file... 
+2020-07-12 01:48:39.948162: saving checkpoint... 
+2020-07-12 01:48:40.343081: done, saving took 0.43 seconds 
+2020-07-12 01:48:40.367376: done 
+2020-07-12 01:48:40.368222: This epoch took 234.348918 s
+ 
+2020-07-12 01:48:40.368909: 
+epoch:  700 
+2020-07-12 01:52:16.788827: train loss : -0.8871 
+2020-07-12 01:52:33.049565: validation loss: -0.8871 
+2020-07-12 01:52:33.051307: Average global foreground Dice: [0.966085185988141, 0.9575691138639992] 
+2020-07-12 01:52:33.052166: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:52:34.305408: lr: 0.003374 
+2020-07-12 01:52:34.306603: This epoch took 233.936850 s
+ 
+2020-07-12 01:52:34.307402: 
+epoch:  701 
+2020-07-12 01:56:10.539705: train loss : -0.8814 
+2020-07-12 01:56:26.799603: validation loss: -0.8683 
+2020-07-12 01:56:26.801325: Average global foreground Dice: [0.9628644284692043, 0.9518494086455056] 
+2020-07-12 01:56:26.802237: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 01:56:27.976706: lr: 0.003364 
+2020-07-12 01:56:27.977910: This epoch took 233.669730 s
+ 
+2020-07-12 01:56:27.978569: 
+epoch:  702 
+2020-07-12 02:00:04.253259: train loss : -0.8801 
+2020-07-12 02:00:20.651698: validation loss: -0.8811 
+2020-07-12 02:00:20.653360: Average global foreground Dice: [0.9628321692513363, 0.9553039129617893] 
+2020-07-12 02:00:20.654291: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:00:21.836354: lr: 0.003353 
+2020-07-12 02:00:21.837430: This epoch took 233.858269 s
+ 
+2020-07-12 02:00:21.838148: 
+epoch:  703 
+2020-07-12 02:03:58.159426: train loss : -0.8851 
+2020-07-12 02:04:14.432526: validation loss: -0.8913 
+2020-07-12 02:04:14.434359: Average global foreground Dice: [0.9637187401757152, 0.9601273763839513] 
+2020-07-12 02:04:14.435236: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:04:15.616481: lr: 0.003343 
+2020-07-12 02:04:15.617660: This epoch took 233.778750 s
+ 
+2020-07-12 02:04:15.618537: 
+epoch:  704 
+2020-07-12 02:07:51.950171: train loss : -0.8864 
+2020-07-12 02:08:08.180618: validation loss: -0.8898 
+2020-07-12 02:08:08.182297: Average global foreground Dice: [0.9629771556369838, 0.95788666702383] 
+2020-07-12 02:08:08.183161: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:08:09.349867: lr: 0.003333 
+2020-07-12 02:08:09.351067: This epoch took 233.731766 s
+ 
+2020-07-12 02:08:09.351846: 
+epoch:  705 
+2020-07-12 02:11:45.725016: train loss : -0.8874 
+2020-07-12 02:12:02.016112: validation loss: -0.8950 
+2020-07-12 02:12:02.017776: Average global foreground Dice: [0.9686478935427574, 0.9584692654276034] 
+2020-07-12 02:12:02.018715: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:12:03.189495: lr: 0.003323 
+2020-07-12 02:12:03.190580: This epoch took 233.838095 s
+ 
+2020-07-12 02:12:03.191208: 
+epoch:  706 
+2020-07-12 02:15:39.512792: train loss : -0.8937 
+2020-07-12 02:15:55.767231: validation loss: -0.8937 
+2020-07-12 02:15:55.768971: Average global foreground Dice: [0.965373885699035, 0.9606239284284882] 
+2020-07-12 02:15:55.769946: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:15:56.943515: lr: 0.003313 
+2020-07-12 02:15:56.944640: This epoch took 233.752838 s
+ 
+2020-07-12 02:15:56.945452: 
+epoch:  707 
+2020-07-12 02:19:33.265927: train loss : -0.8936 
+2020-07-12 02:19:49.558401: validation loss: -0.8967 
+2020-07-12 02:19:49.560561: Average global foreground Dice: [0.9661575478301271, 0.9617899686722566] 
+2020-07-12 02:19:49.561606: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:19:50.749294: lr: 0.003303 
+2020-07-12 02:19:50.750538: This epoch took 233.804439 s
+ 
+2020-07-12 02:19:50.751199: 
+epoch:  708 
+2020-07-12 02:23:27.205523: train loss : -0.8933 
+2020-07-12 02:23:43.451460: validation loss: -0.8939 
+2020-07-12 02:23:43.453164: Average global foreground Dice: [0.9673891249318056, 0.957155809792211] 
+2020-07-12 02:23:43.454141: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:23:44.626117: lr: 0.003292 
+2020-07-12 02:23:44.627294: This epoch took 233.875409 s
+ 
+2020-07-12 02:23:44.628096: 
+epoch:  709 
+2020-07-12 02:27:20.976250: train loss : -0.8884 
+2020-07-12 02:27:37.231636: validation loss: -0.8887 
+2020-07-12 02:27:37.233134: Average global foreground Dice: [0.9628138915492692, 0.9598360926275131] 
+2020-07-12 02:27:37.234059: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:27:38.412953: lr: 0.003282 
+2020-07-12 02:27:38.414158: This epoch took 233.785370 s
+ 
+2020-07-12 02:27:38.414884: 
+epoch:  710 
+2020-07-12 02:31:14.772606: train loss : -0.8797 
+2020-07-12 02:31:31.009131: validation loss: -0.8816 
+2020-07-12 02:31:31.010892: Average global foreground Dice: [0.964882344750025, 0.9548721529516456] 
+2020-07-12 02:31:31.011847: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:31:32.178884: lr: 0.003272 
+2020-07-12 02:31:32.180056: This epoch took 233.764503 s
+ 
+2020-07-12 02:31:32.180701: 
+epoch:  711 
+2020-07-12 02:35:08.467822: train loss : -0.8833 
+2020-07-12 02:35:24.790568: validation loss: -0.8718 
+2020-07-12 02:35:24.792424: Average global foreground Dice: [0.9627566206121771, 0.9552297895955345] 
+2020-07-12 02:35:24.793366: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:35:25.962515: lr: 0.003262 
+2020-07-12 02:35:25.963760: This epoch took 233.782158 s
+ 
+2020-07-12 02:35:25.964579: 
+epoch:  712 
+2020-07-12 02:39:02.274869: train loss : -0.8819 
+2020-07-12 02:39:18.550478: validation loss: -0.8734 
+2020-07-12 02:39:18.552192: Average global foreground Dice: [0.9587404060235314, 0.9501848500874766] 
+2020-07-12 02:39:18.553111: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:39:19.721031: lr: 0.003252 
+2020-07-12 02:39:19.722409: This epoch took 233.757186 s
+ 
+2020-07-12 02:39:19.723316: 
+epoch:  713 
+2020-07-12 02:42:56.039288: train loss : -0.8883 
+2020-07-12 02:43:12.302432: validation loss: -0.8884 
+2020-07-12 02:43:12.304145: Average global foreground Dice: [0.9687607882536518, 0.9592596628902005] 
+2020-07-12 02:43:12.304967: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:43:13.474476: lr: 0.003241 
+2020-07-12 02:43:13.475492: This epoch took 233.751466 s
+ 
+2020-07-12 02:43:13.476093: 
+epoch:  714 
+2020-07-12 02:46:49.838163: train loss : -0.8952 
+2020-07-12 02:47:06.126102: validation loss: -0.8990 
+2020-07-12 02:47:06.127879: Average global foreground Dice: [0.9698026241113938, 0.9597688839706386] 
+2020-07-12 02:47:06.128852: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:47:07.298333: lr: 0.003231 
+2020-07-12 02:47:07.299500: This epoch took 233.822828 s
+ 
+2020-07-12 02:47:07.300201: 
+epoch:  715 
+2020-07-12 02:50:43.549536: train loss : -0.8892 
+2020-07-12 02:50:59.787701: validation loss: -0.8981 
+2020-07-12 02:50:59.789366: Average global foreground Dice: [0.9677351700226725, 0.9601486291210891] 
+2020-07-12 02:50:59.790298: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:51:00.958450: lr: 0.003221 
+2020-07-12 02:51:00.959599: This epoch took 233.658745 s
+ 
+2020-07-12 02:51:00.960439: 
+epoch:  716 
+2020-07-12 02:54:37.330181: train loss : -0.8904 
+2020-07-12 02:54:53.587073: validation loss: -0.8891 
+2020-07-12 02:54:53.588777: Average global foreground Dice: [0.9662125069111756, 0.9587868207362168] 
+2020-07-12 02:54:53.589731: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:54:54.756269: lr: 0.003211 
+2020-07-12 02:54:54.757524: This epoch took 233.796399 s
+ 
+2020-07-12 02:54:54.758287: 
+epoch:  717 
+2020-07-12 02:58:31.084267: train loss : -0.8958 
+2020-07-12 02:58:47.384879: validation loss: -0.8882 
+2020-07-12 02:58:47.386531: Average global foreground Dice: [0.9675244230841594, 0.9600000186061299] 
+2020-07-12 02:58:47.387353: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 02:58:48.555032: lr: 0.003201 
+2020-07-12 02:58:48.556232: This epoch took 233.797239 s
+ 
+2020-07-12 02:58:48.557025: 
+epoch:  718 
+2020-07-12 03:02:24.954082: train loss : -0.8902 
+2020-07-12 03:02:41.222543: validation loss: -0.8968 
+2020-07-12 03:02:41.224363: Average global foreground Dice: [0.969665774519472, 0.9589234887375235] 
+2020-07-12 03:02:41.225386: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:02:42.391912: lr: 0.00319 
+2020-07-12 03:02:42.393082: This epoch took 233.835384 s
+ 
+2020-07-12 03:02:42.393794: 
+epoch:  719 
+2020-07-12 03:06:18.701783: train loss : -0.8924 
+2020-07-12 03:06:34.966652: validation loss: -0.8866 
+2020-07-12 03:06:34.968384: Average global foreground Dice: [0.9635395008877177, 0.9604929606083332] 
+2020-07-12 03:06:34.969363: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:06:36.158168: lr: 0.00318 
+2020-07-12 03:06:36.159415: This epoch took 233.764705 s
+ 
+2020-07-12 03:06:36.160221: 
+epoch:  720 
+2020-07-12 03:10:12.488078: train loss : -0.8952 
+2020-07-12 03:10:28.759415: validation loss: -0.8876 
+2020-07-12 03:10:28.761157: Average global foreground Dice: [0.9649977845967326, 0.960934479593902] 
+2020-07-12 03:10:28.762110: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:10:29.939718: lr: 0.00317 
+2020-07-12 03:10:29.940753: This epoch took 233.779896 s
+ 
+2020-07-12 03:10:29.941392: 
+epoch:  721 
+2020-07-12 03:14:06.225829: train loss : -0.8940 
+2020-07-12 03:14:22.520035: validation loss: -0.8946 
+2020-07-12 03:14:22.521731: Average global foreground Dice: [0.967889949078205, 0.9587991817595128] 
+2020-07-12 03:14:22.522680: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:14:23.691173: lr: 0.00316 
+2020-07-12 03:14:23.692461: This epoch took 233.750389 s
+ 
+2020-07-12 03:14:23.693293: 
+epoch:  722 
+2020-07-12 03:18:00.053643: train loss : -0.8936 
+2020-07-12 03:18:16.319151: validation loss: -0.8983 
+2020-07-12 03:18:16.320899: Average global foreground Dice: [0.9667151055095544, 0.9604516750432027] 
+2020-07-12 03:18:16.321839: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:18:17.493949: lr: 0.003149 
+2020-07-12 03:18:17.495151: This epoch took 233.801113 s
+ 
+2020-07-12 03:18:17.495857: 
+epoch:  723 
+2020-07-12 03:21:53.777124: train loss : -0.8931 
+2020-07-12 03:22:10.164752: validation loss: -0.8940 
+2020-07-12 03:22:10.166378: Average global foreground Dice: [0.9671709237472589, 0.9611013727622046] 
+2020-07-12 03:22:10.167371: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:22:11.334670: lr: 0.003139 
+2020-07-12 03:22:11.335817: This epoch took 233.839165 s
+ 
+2020-07-12 03:22:11.336705: 
+epoch:  724 
+2020-07-12 03:25:47.623867: train loss : -0.8972 
+2020-07-12 03:26:03.898194: validation loss: -0.8893 
+2020-07-12 03:26:03.899902: Average global foreground Dice: [0.9652083506198574, 0.9573152503697132] 
+2020-07-12 03:26:03.900893: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:26:05.070764: lr: 0.003129 
+2020-07-12 03:26:05.071918: This epoch took 233.734466 s
+ 
+2020-07-12 03:26:05.072525: 
+epoch:  725 
+2020-07-12 03:29:41.522839: train loss : -0.8946 
+2020-07-12 03:29:57.766633: validation loss: -0.9005 
+2020-07-12 03:29:57.768362: Average global foreground Dice: [0.9674967188286279, 0.9610391967266759] 
+2020-07-12 03:29:57.769372: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:29:58.936555: lr: 0.003119 
+2020-07-12 03:29:58.937867: This epoch took 233.864542 s
+ 
+2020-07-12 03:29:58.938714: 
+epoch:  726 
+2020-07-12 03:33:35.181387: train loss : -0.8947 
+2020-07-12 03:33:51.445158: validation loss: -0.8959 
+2020-07-12 03:33:51.449562: Average global foreground Dice: [0.9676264624330589, 0.9606498319825487] 
+2020-07-12 03:33:51.450526: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:33:52.621074: lr: 0.003108 
+2020-07-12 03:33:52.658317: saving checkpoint... 
+2020-07-12 03:33:54.664839: done, saving took 2.04 seconds 
+2020-07-12 03:33:54.690717: This epoch took 235.751360 s
+ 
+2020-07-12 03:33:54.691605: 
+epoch:  727 
+2020-07-12 03:37:31.044055: train loss : -0.8942 
+2020-07-12 03:37:47.343984: validation loss: -0.8858 
+2020-07-12 03:37:47.345637: Average global foreground Dice: [0.9631954949546202, 0.9573490497748609] 
+2020-07-12 03:37:47.346508: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:37:48.517314: lr: 0.003098 
+2020-07-12 03:37:48.518518: This epoch took 233.826161 s
+ 
+2020-07-12 03:37:48.519263: 
+epoch:  728 
+2020-07-12 03:41:24.822788: train loss : -0.8944 
+2020-07-12 03:41:41.091493: validation loss: -0.8882 
+2020-07-12 03:41:41.093200: Average global foreground Dice: [0.9647336641042107, 0.9618533385279614] 
+2020-07-12 03:41:41.094157: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:41:42.264467: lr: 0.003088 
+2020-07-12 03:41:42.265823: This epoch took 233.745933 s
+ 
+2020-07-12 03:41:42.266718: 
+epoch:  729 
+2020-07-12 03:45:18.641272: train loss : -0.8956 
+2020-07-12 03:45:34.888776: validation loss: -0.8881 
+2020-07-12 03:45:34.890584: Average global foreground Dice: [0.9658809636981733, 0.958082310957316] 
+2020-07-12 03:45:34.891509: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:45:36.060759: lr: 0.003078 
+2020-07-12 03:45:36.061841: This epoch took 233.794482 s
+ 
+2020-07-12 03:45:36.062461: 
+epoch:  730 
+2020-07-12 03:49:12.385247: train loss : -0.8848 
+2020-07-12 03:49:28.651412: validation loss: -0.8827 
+2020-07-12 03:49:28.653138: Average global foreground Dice: [0.9638938658793162, 0.9546911338018952] 
+2020-07-12 03:49:28.654102: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:49:29.823491: lr: 0.003067 
+2020-07-12 03:49:29.824640: This epoch took 233.761569 s
+ 
+2020-07-12 03:49:29.825351: 
+epoch:  731 
+2020-07-12 03:53:06.102947: train loss : -0.8824 
+2020-07-12 03:53:22.353367: validation loss: -0.8916 
+2020-07-12 03:53:22.355014: Average global foreground Dice: [0.9660237249224513, 0.9595896705555497] 
+2020-07-12 03:53:22.355987: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:53:23.522259: lr: 0.003057 
+2020-07-12 03:53:23.541364: This epoch took 233.715259 s
+ 
+2020-07-12 03:53:23.542159: 
+epoch:  732 
+2020-07-12 03:56:59.819169: train loss : -0.8904 
+2020-07-12 03:57:16.082244: validation loss: -0.8764 
+2020-07-12 03:57:16.083909: Average global foreground Dice: [0.9651201905093729, 0.9554607602288382] 
+2020-07-12 03:57:16.084846: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 03:57:17.251994: lr: 0.003047 
+2020-07-12 03:57:17.266428: This epoch took 233.723603 s
+ 
+2020-07-12 03:57:17.267212: 
+epoch:  733 
+2020-07-12 04:00:53.573027: train loss : -0.8906 
+2020-07-12 04:01:09.871037: validation loss: -0.8940 
+2020-07-12 04:01:09.872859: Average global foreground Dice: [0.9655636745665293, 0.9589645656294835] 
+2020-07-12 04:01:09.873833: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:01:11.040688: lr: 0.003037 
+2020-07-12 04:01:11.041913: This epoch took 233.773927 s
+ 
+2020-07-12 04:01:11.042773: 
+epoch:  734 
+2020-07-12 04:04:47.292267: train loss : -0.8812 
+2020-07-12 04:05:03.563361: validation loss: -0.8582 
+2020-07-12 04:05:03.565195: Average global foreground Dice: [0.9557655393362577, 0.9507947886864615] 
+2020-07-12 04:05:03.565937: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:05:04.736197: lr: 0.003026 
+2020-07-12 04:05:04.737373: This epoch took 233.693836 s
+ 
+2020-07-12 04:05:04.738225: 
+epoch:  735 
+2020-07-12 04:08:41.067563: train loss : -0.8595 
+2020-07-12 04:08:57.325845: validation loss: -0.8651 
+2020-07-12 04:08:57.327515: Average global foreground Dice: [0.957888452576527, 0.9504140092586467] 
+2020-07-12 04:08:57.328491: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:08:58.493887: lr: 0.003016 
+2020-07-12 04:08:58.494994: This epoch took 233.756039 s
+ 
+2020-07-12 04:08:58.495831: 
+epoch:  736 
+2020-07-12 04:12:34.813273: train loss : -0.8676 
+2020-07-12 04:12:51.078421: validation loss: -0.8699 
+2020-07-12 04:12:51.080178: Average global foreground Dice: [0.9593207530831336, 0.9553322442491617] 
+2020-07-12 04:12:51.081193: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:12:52.263960: lr: 0.003006 
+2020-07-12 04:12:52.265273: This epoch took 233.768685 s
+ 
+2020-07-12 04:12:52.266133: 
+epoch:  737 
+2020-07-12 04:16:28.567560: train loss : -0.8674 
+2020-07-12 04:16:44.824645: validation loss: -0.8771 
+2020-07-12 04:16:44.826406: Average global foreground Dice: [0.9657187007136062, 0.9542230895512612] 
+2020-07-12 04:16:44.827355: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:16:46.005032: lr: 0.002996 
+2020-07-12 04:16:46.006176: This epoch took 233.739380 s
+ 
+2020-07-12 04:16:46.006788: 
+epoch:  738 
+2020-07-12 04:20:22.278767: train loss : -0.8746 
+2020-07-12 04:20:38.560445: validation loss: -0.8725 
+2020-07-12 04:20:38.562071: Average global foreground Dice: [0.9604352134409544, 0.9515347759447422] 
+2020-07-12 04:20:38.563088: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:20:39.733848: lr: 0.002985 
+2020-07-12 04:20:39.735200: This epoch took 233.727824 s
+ 
+2020-07-12 04:20:39.735964: 
+epoch:  739 
+2020-07-12 04:24:16.107548: train loss : -0.8740 
+2020-07-12 04:24:32.390435: validation loss: -0.8778 
+2020-07-12 04:24:32.392097: Average global foreground Dice: [0.9631281211527946, 0.9553709408712654] 
+2020-07-12 04:24:32.393078: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:24:33.559465: lr: 0.002975 
+2020-07-12 04:24:33.560889: This epoch took 233.824131 s
+ 
+2020-07-12 04:24:33.561884: 
+epoch:  740 
+2020-07-12 04:28:09.929212: train loss : -0.8853 
+2020-07-12 04:28:26.200407: validation loss: -0.8832 
+2020-07-12 04:28:26.202020: Average global foreground Dice: [0.9615628790356016, 0.9565109228953115] 
+2020-07-12 04:28:26.202944: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:28:27.369518: lr: 0.002965 
+2020-07-12 04:28:27.370894: This epoch took 233.808061 s
+ 
+2020-07-12 04:28:27.371848: 
+epoch:  741 
+2020-07-12 04:32:03.707584: train loss : -0.8910 
+2020-07-12 04:32:19.992350: validation loss: -0.8759 
+2020-07-12 04:32:19.994153: Average global foreground Dice: [0.9659015435200816, 0.9578325643756352] 
+2020-07-12 04:32:19.995130: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:32:21.160317: lr: 0.002954 
+2020-07-12 04:32:21.173434: This epoch took 233.800674 s
+ 
+2020-07-12 04:32:21.174193: 
+epoch:  742 
+2020-07-12 04:35:57.461014: train loss : -0.8894 
+2020-07-12 04:36:13.695598: validation loss: -0.8861 
+2020-07-12 04:36:13.697253: Average global foreground Dice: [0.962880947252292, 0.9543481900922466] 
+2020-07-12 04:36:13.698261: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:36:14.866825: lr: 0.002944 
+2020-07-12 04:36:14.868163: This epoch took 233.693338 s
+ 
+2020-07-12 04:36:14.869052: 
+epoch:  743 
+2020-07-12 04:39:51.391816: train loss : -0.8953 
+2020-07-12 04:40:07.662124: validation loss: -0.8848 
+2020-07-12 04:40:07.664009: Average global foreground Dice: [0.96677131660875, 0.9553453126317681] 
+2020-07-12 04:40:07.664986: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:40:08.838157: lr: 0.002934 
+2020-07-12 04:40:08.839336: This epoch took 233.969587 s
+ 
+2020-07-12 04:40:08.840125: 
+epoch:  744 
+2020-07-12 04:43:45.176665: train loss : -0.8916 
+2020-07-12 04:44:01.440458: validation loss: -0.8884 
+2020-07-12 04:44:01.442168: Average global foreground Dice: [0.9656315368654201, 0.9623714662003331] 
+2020-07-12 04:44:01.443160: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:44:02.609983: lr: 0.002923 
+2020-07-12 04:44:02.611207: This epoch took 233.770390 s
+ 
+2020-07-12 04:44:02.611892: 
+epoch:  745 
+2020-07-12 04:47:38.958809: train loss : -0.8954 
+2020-07-12 04:47:55.233114: validation loss: -0.9002 
+2020-07-12 04:47:55.234952: Average global foreground Dice: [0.9662467667983698, 0.961011614472317] 
+2020-07-12 04:47:55.235904: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:47:56.403073: lr: 0.002913 
+2020-07-12 04:47:56.416336: This epoch took 233.803679 s
+ 
+2020-07-12 04:47:56.417206: 
+epoch:  746 
+2020-07-12 04:51:32.702726: train loss : -0.8941 
+2020-07-12 04:51:48.985511: validation loss: -0.8892 
+2020-07-12 04:51:48.987223: Average global foreground Dice: [0.9668576424861786, 0.9584114100835995] 
+2020-07-12 04:51:48.988209: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:51:50.159845: lr: 0.002903 
+2020-07-12 04:51:50.174437: This epoch took 233.756591 s
+ 
+2020-07-12 04:51:50.175341: 
+epoch:  747 
+2020-07-12 04:55:26.617076: train loss : -0.8980 
+2020-07-12 04:55:42.884376: validation loss: -0.8886 
+2020-07-12 04:55:42.886082: Average global foreground Dice: [0.9670225619788934, 0.9582686393405083] 
+2020-07-12 04:55:42.887102: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:55:44.054533: lr: 0.002892 
+2020-07-12 04:55:44.067321: This epoch took 233.891221 s
+ 
+2020-07-12 04:55:44.068135: 
+epoch:  748 
+2020-07-12 04:59:20.384962: train loss : -0.8937 
+2020-07-12 04:59:36.637613: validation loss: -0.8951 
+2020-07-12 04:59:36.639269: Average global foreground Dice: [0.9670461241792684, 0.9555613038329903] 
+2020-07-12 04:59:36.640272: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 04:59:37.806170: lr: 0.002882 
+2020-07-12 04:59:37.807414: This epoch took 233.738631 s
+ 
+2020-07-12 04:59:37.808139: 
+epoch:  749 
+2020-07-12 05:03:14.189946: train loss : -0.8912 
+2020-07-12 05:03:30.472212: validation loss: -0.8984 
+2020-07-12 05:03:30.474009: Average global foreground Dice: [0.9655834414881828, 0.9615651568314002] 
+2020-07-12 05:03:30.474981: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:03:31.641920: lr: 0.002872 
+2020-07-12 05:03:31.643080: saving scheduled checkpoint file... 
+2020-07-12 05:03:31.679712: saving checkpoint... 
+2020-07-12 05:03:32.084377: done, saving took 0.44 seconds 
+2020-07-12 05:03:32.108493: done 
+2020-07-12 05:03:32.109345: This epoch took 234.300581 s
+ 
+2020-07-12 05:03:32.110067: 
+epoch:  750 
+2020-07-12 05:07:08.413996: train loss : -0.8900 
+2020-07-12 05:07:24.700475: validation loss: -0.8878 
+2020-07-12 05:07:24.702162: Average global foreground Dice: [0.9679209793993383, 0.9601951597969315] 
+2020-07-12 05:07:24.703108: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:07:25.951593: lr: 0.002861 
+2020-07-12 05:07:25.952739: This epoch took 233.841256 s
+ 
+2020-07-12 05:07:25.953485: 
+epoch:  751 
+2020-07-12 05:11:02.271969: train loss : -0.8931 
+2020-07-12 05:11:18.553021: validation loss: -0.8932 
+2020-07-12 05:11:18.554718: Average global foreground Dice: [0.9678427271611527, 0.9555723566685206] 
+2020-07-12 05:11:18.555702: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:11:19.723767: lr: 0.002851 
+2020-07-12 05:11:19.724890: This epoch took 233.770710 s
+ 
+2020-07-12 05:11:19.725703: 
+epoch:  752 
+2020-07-12 05:14:56.062532: train loss : -0.8884 
+2020-07-12 05:15:12.433187: validation loss: -0.8878 
+2020-07-12 05:15:12.434819: Average global foreground Dice: [0.9646360828291589, 0.9590119665936918] 
+2020-07-12 05:15:12.435744: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:15:13.599273: lr: 0.002841 
+2020-07-12 05:15:13.600439: This epoch took 233.874104 s
+ 
+2020-07-12 05:15:13.601088: 
+epoch:  753 
+2020-07-12 05:18:49.885625: train loss : -0.8922 
+2020-07-12 05:19:06.161639: validation loss: -0.8931 
+2020-07-12 05:19:06.163410: Average global foreground Dice: [0.9658308914228119, 0.9633889401298843] 
+2020-07-12 05:19:06.164335: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:19:07.347273: lr: 0.00283 
+2020-07-12 05:19:07.348442: This epoch took 233.746770 s
+ 
+2020-07-12 05:19:07.349205: 
+epoch:  754 
+2020-07-12 05:22:43.703912: train loss : -0.8940 
+2020-07-12 05:22:59.970245: validation loss: -0.8771 
+2020-07-12 05:22:59.971967: Average global foreground Dice: [0.9384813134944877, 0.9587080041111158] 
+2020-07-12 05:22:59.972961: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:23:01.150856: lr: 0.00282 
+2020-07-12 05:23:01.152059: This epoch took 233.802193 s
+ 
+2020-07-12 05:23:01.152773: 
+epoch:  755 
+2020-07-12 05:26:37.443452: train loss : -0.8828 
+2020-07-12 05:26:53.723163: validation loss: -0.8777 
+2020-07-12 05:26:53.724853: Average global foreground Dice: [0.9648379381397543, 0.9581004426825018] 
+2020-07-12 05:26:53.725840: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:26:54.895159: lr: 0.00281 
+2020-07-12 05:26:54.896421: This epoch took 233.742866 s
+ 
+2020-07-12 05:26:54.897149: 
+epoch:  756 
+2020-07-12 05:30:31.367882: train loss : -0.8836 
+2020-07-12 05:30:47.642311: validation loss: -0.8851 
+2020-07-12 05:30:47.644174: Average global foreground Dice: [0.9625662769245662, 0.9543429323668751] 
+2020-07-12 05:30:47.645188: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:30:48.814112: lr: 0.002799 
+2020-07-12 05:30:48.815472: This epoch took 233.917609 s
+ 
+2020-07-12 05:30:48.816260: 
+epoch:  757 
+2020-07-12 05:34:25.167790: train loss : -0.8936 
+2020-07-12 05:34:41.444544: validation loss: -0.8957 
+2020-07-12 05:34:41.446325: Average global foreground Dice: [0.964652266759672, 0.9609937792928744] 
+2020-07-12 05:34:41.447306: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:34:42.616440: lr: 0.002789 
+2020-07-12 05:34:42.617586: This epoch took 233.800591 s
+ 
+2020-07-12 05:34:42.618294: 
+epoch:  758 
+2020-07-12 05:38:19.089427: train loss : -0.8890 
+2020-07-12 05:38:35.365405: validation loss: -0.8832 
+2020-07-12 05:38:35.367008: Average global foreground Dice: [0.9643214318242901, 0.9585086941718967] 
+2020-07-12 05:38:35.368009: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:38:36.539670: lr: 0.002779 
+2020-07-12 05:38:36.540837: This epoch took 233.921807 s
+ 
+2020-07-12 05:38:36.541624: 
+epoch:  759 
+2020-07-12 05:42:12.858257: train loss : -0.8843 
+2020-07-12 05:42:29.130748: validation loss: -0.8926 
+2020-07-12 05:42:29.132466: Average global foreground Dice: [0.9647933382299619, 0.9587874528137379] 
+2020-07-12 05:42:29.133398: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:42:30.307481: lr: 0.002768 
+2020-07-12 05:42:30.308686: This epoch took 233.766332 s
+ 
+2020-07-12 05:42:30.309394: 
+epoch:  760 
+2020-07-12 05:46:06.631686: train loss : -0.8893 
+2020-07-12 05:46:22.919773: validation loss: -0.8892 
+2020-07-12 05:46:22.921544: Average global foreground Dice: [0.9644798142743152, 0.9613433361289384] 
+2020-07-12 05:46:22.922459: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:46:24.094061: lr: 0.002758 
+2020-07-12 05:46:24.095372: This epoch took 233.785277 s
+ 
+2020-07-12 05:46:24.096090: 
+epoch:  761 
+2020-07-12 05:50:00.365223: train loss : -0.8924 
+2020-07-12 05:50:16.648492: validation loss: -0.8975 
+2020-07-12 05:50:16.650470: Average global foreground Dice: [0.9663684256657904, 0.9600130193422792] 
+2020-07-12 05:50:16.651384: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:50:17.852151: lr: 0.002747 
+2020-07-12 05:50:17.853348: This epoch took 233.756641 s
+ 
+2020-07-12 05:50:17.854069: 
+epoch:  762 
+2020-07-12 05:53:54.304522: train loss : -0.8921 
+2020-07-12 05:54:10.598040: validation loss: -0.8963 
+2020-07-12 05:54:10.599708: Average global foreground Dice: [0.9651608883837911, 0.959932582825419] 
+2020-07-12 05:54:10.600623: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:54:11.773448: lr: 0.002737 
+2020-07-12 05:54:11.774536: This epoch took 233.919837 s
+ 
+2020-07-12 05:54:11.775150: 
+epoch:  763 
+2020-07-12 05:57:48.040534: train loss : -0.8908 
+2020-07-12 05:58:04.327099: validation loss: -0.8934 
+2020-07-12 05:58:04.328984: Average global foreground Dice: [0.9656660149198686, 0.9602436603359307] 
+2020-07-12 05:58:04.330034: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 05:58:05.509912: lr: 0.002727 
+2020-07-12 05:58:05.511137: This epoch took 233.735385 s
+ 
+2020-07-12 05:58:05.511899: 
+epoch:  764 
+2020-07-12 06:01:41.876779: train loss : -0.8921 
+2020-07-12 06:01:58.179412: validation loss: -0.8849 
+2020-07-12 06:01:58.181190: Average global foreground Dice: [0.9643500472313362, 0.9609189496323672] 
+2020-07-12 06:01:58.182169: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:01:59.363786: lr: 0.002716 
+2020-07-12 06:01:59.365113: This epoch took 233.852586 s
+ 
+2020-07-12 06:01:59.365837: 
+epoch:  765 
+2020-07-12 06:05:35.729104: train loss : -0.8793 
+2020-07-12 06:05:52.044313: validation loss: -0.8537 
+2020-07-12 06:05:52.046156: Average global foreground Dice: [0.9499053309692765, 0.9477258275424754] 
+2020-07-12 06:05:52.047144: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:05:53.216651: lr: 0.002706 
+2020-07-12 06:05:53.217814: This epoch took 233.851230 s
+ 
+2020-07-12 06:05:53.218581: 
+epoch:  766 
+2020-07-12 06:09:29.565875: train loss : -0.8794 
+2020-07-12 06:09:45.857017: validation loss: -0.8889 
+2020-07-12 06:09:45.858770: Average global foreground Dice: [0.9666095405790911, 0.9538784379102337] 
+2020-07-12 06:09:45.859718: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:09:47.030546: lr: 0.002695 
+2020-07-12 06:09:47.031705: This epoch took 233.812466 s
+ 
+2020-07-12 06:09:47.032497: 
+epoch:  767 
+2020-07-12 06:13:23.279070: train loss : -0.8824 
+2020-07-12 06:13:39.566000: validation loss: -0.8807 
+2020-07-12 06:13:39.567728: Average global foreground Dice: [0.9627648589424357, 0.9583251172630644] 
+2020-07-12 06:13:39.568680: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:13:40.739978: lr: 0.002685 
+2020-07-12 06:13:40.741199: This epoch took 233.708078 s
+ 
+2020-07-12 06:13:40.742126: 
+epoch:  768 
+2020-07-12 06:17:17.084939: train loss : -0.8841 
+2020-07-12 06:17:33.350128: validation loss: -0.8866 
+2020-07-12 06:17:33.351819: Average global foreground Dice: [0.9611308616932625, 0.9581245255398171] 
+2020-07-12 06:17:33.352735: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:17:34.522367: lr: 0.002675 
+2020-07-12 06:17:34.523529: This epoch took 233.780737 s
+ 
+2020-07-12 06:17:34.524258: 
+epoch:  769 
+2020-07-12 06:21:10.821160: train loss : -0.8848 
+2020-07-12 06:21:27.100261: validation loss: -0.8889 
+2020-07-12 06:21:27.101995: Average global foreground Dice: [0.9658576303202083, 0.9583465756516372] 
+2020-07-12 06:21:27.102911: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:21:28.275970: lr: 0.002664 
+2020-07-12 06:21:28.277172: This epoch took 233.752296 s
+ 
+2020-07-12 06:21:28.277875: 
+epoch:  770 
+2020-07-12 06:25:04.553102: train loss : -0.8909 
+2020-07-12 06:25:20.826293: validation loss: -0.8909 
+2020-07-12 06:25:20.828033: Average global foreground Dice: [0.964601383865025, 0.9601950069754253] 
+2020-07-12 06:25:20.829000: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:25:22.017875: lr: 0.002654 
+2020-07-12 06:25:22.019178: This epoch took 233.740614 s
+ 
+2020-07-12 06:25:22.019847: 
+epoch:  771 
+2020-07-12 06:28:58.250915: train loss : -0.8942 
+2020-07-12 06:29:14.527465: validation loss: -0.8807 
+2020-07-12 06:29:14.529107: Average global foreground Dice: [0.9694644372188764, 0.9562889318481697] 
+2020-07-12 06:29:14.530006: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:29:15.720704: lr: 0.002643 
+2020-07-12 06:29:15.721816: This epoch took 233.701376 s
+ 
+2020-07-12 06:29:15.722435: 
+epoch:  772 
+2020-07-12 06:32:52.059614: train loss : -0.8940 
+2020-07-12 06:33:08.340055: validation loss: -0.8851 
+2020-07-12 06:33:08.341904: Average global foreground Dice: [0.9654282077365889, 0.9632169813191325] 
+2020-07-12 06:33:08.342945: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:33:09.515987: lr: 0.002633 
+2020-07-12 06:33:09.517254: This epoch took 233.794216 s
+ 
+2020-07-12 06:33:09.518092: 
+epoch:  773 
+2020-07-12 06:36:45.760388: train loss : -0.8960 
+2020-07-12 06:37:02.051857: validation loss: -0.8981 
+2020-07-12 06:37:02.053491: Average global foreground Dice: [0.9677701650670189, 0.9609413824558535] 
+2020-07-12 06:37:02.054312: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:37:03.229841: lr: 0.002622 
+2020-07-12 06:37:03.231189: This epoch took 233.712237 s
+ 
+2020-07-12 06:37:03.232112: 
+epoch:  774 
+2020-07-12 06:40:39.678280: train loss : -0.8940 
+2020-07-12 06:40:55.983978: validation loss: -0.8858 
+2020-07-12 06:40:55.985693: Average global foreground Dice: [0.9687708528207563, 0.9574775012947682] 
+2020-07-12 06:40:55.986614: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:40:57.159791: lr: 0.002612 
+2020-07-12 06:40:57.161032: This epoch took 233.928137 s
+ 
+2020-07-12 06:40:57.161926: 
+epoch:  775 
+2020-07-12 06:44:33.459767: train loss : -0.8908 
+2020-07-12 06:44:49.764310: validation loss: -0.8771 
+2020-07-12 06:44:49.765994: Average global foreground Dice: [0.9650879354714978, 0.9603771807984532] 
+2020-07-12 06:44:49.766926: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:44:50.937966: lr: 0.002601 
+2020-07-12 06:44:50.939146: This epoch took 233.776502 s
+ 
+2020-07-12 06:44:50.939895: 
+epoch:  776 
+2020-07-12 06:48:27.279712: train loss : -0.8965 
+2020-07-12 06:48:43.563010: validation loss: -0.8869 
+2020-07-12 06:48:43.564797: Average global foreground Dice: [0.9613039038052512, 0.9605931924174345] 
+2020-07-12 06:48:43.565730: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:48:44.736526: lr: 0.002591 
+2020-07-12 06:48:44.737695: This epoch took 233.797153 s
+ 
+2020-07-12 06:48:44.738433: 
+epoch:  777 
+2020-07-12 06:52:21.064251: train loss : -0.9013 
+2020-07-12 06:52:37.381072: validation loss: -0.8988 
+2020-07-12 06:52:37.382807: Average global foreground Dice: [0.9647252714350598, 0.9615955885634746] 
+2020-07-12 06:52:37.383764: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:52:38.556909: lr: 0.002581 
+2020-07-12 06:52:38.558098: This epoch took 233.819066 s
+ 
+2020-07-12 06:52:38.558781: 
+epoch:  778 
+2020-07-12 06:56:14.929039: train loss : -0.8968 
+2020-07-12 06:56:31.216826: validation loss: -0.8893 
+2020-07-12 06:56:31.218816: Average global foreground Dice: [0.9672274657551488, 0.961309320831145] 
+2020-07-12 06:56:31.219878: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 06:56:32.408485: lr: 0.00257 
+2020-07-12 06:56:32.409713: This epoch took 233.850116 s
+ 
+2020-07-12 06:56:32.410539: 
+epoch:  779 
+2020-07-12 07:00:08.702716: train loss : -0.8964 
+2020-07-12 07:00:24.977303: validation loss: -0.8887 
+2020-07-12 07:00:24.979113: Average global foreground Dice: [0.9686014488940343, 0.9603778635120958] 
+2020-07-12 07:00:24.980094: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:00:26.154459: lr: 0.00256 
+2020-07-12 07:00:26.155671: This epoch took 233.744514 s
+ 
+2020-07-12 07:00:26.156395: 
+epoch:  780 
+2020-07-12 07:04:02.562368: train loss : -0.8809 
+2020-07-12 07:04:18.828815: validation loss: -0.8765 
+2020-07-12 07:04:18.830769: Average global foreground Dice: [0.9650668457533468, 0.9547148539679969] 
+2020-07-12 07:04:18.831682: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:04:20.005112: lr: 0.002549 
+2020-07-12 07:04:20.006417: This epoch took 233.849282 s
+ 
+2020-07-12 07:04:20.007149: 
+epoch:  781 
+2020-07-12 07:07:56.239027: train loss : -0.8803 
+2020-07-12 07:08:12.500930: validation loss: -0.8828 
+2020-07-12 07:08:12.502603: Average global foreground Dice: [0.9622605549728921, 0.9559562849102187] 
+2020-07-12 07:08:12.503520: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:08:13.676790: lr: 0.002539 
+2020-07-12 07:08:13.678088: This epoch took 233.670110 s
+ 
+2020-07-12 07:08:13.678796: 
+epoch:  782 
+2020-07-12 07:11:50.003115: train loss : -0.8906 
+2020-07-12 07:12:06.237091: validation loss: -0.8979 
+2020-07-12 07:12:06.238807: Average global foreground Dice: [0.9635983338603027, 0.961699667527812] 
+2020-07-12 07:12:06.239776: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:12:07.412811: lr: 0.002528 
+2020-07-12 07:12:07.413933: This epoch took 233.734289 s
+ 
+2020-07-12 07:12:07.414799: 
+epoch:  783 
+2020-07-12 07:15:43.680732: train loss : -0.8949 
+2020-07-12 07:15:59.982680: validation loss: -0.8981 
+2020-07-12 07:15:59.984447: Average global foreground Dice: [0.96674877626305, 0.9622236257015074] 
+2020-07-12 07:15:59.985364: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:16:01.157279: lr: 0.002518 
+2020-07-12 07:16:01.158479: This epoch took 233.742876 s
+ 
+2020-07-12 07:16:01.159261: 
+epoch:  784 
+2020-07-12 07:19:37.578256: train loss : -0.8938 
+2020-07-12 07:19:53.860878: validation loss: -0.8892 
+2020-07-12 07:19:53.862754: Average global foreground Dice: [0.96503053306474, 0.9594097382683626] 
+2020-07-12 07:19:53.863704: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:19:55.037392: lr: 0.002507 
+2020-07-12 07:19:55.038651: This epoch took 233.878675 s
+ 
+2020-07-12 07:19:55.039359: 
+epoch:  785 
+2020-07-12 07:23:31.265455: train loss : -0.8932 
+2020-07-12 07:23:47.565051: validation loss: -0.8821 
+2020-07-12 07:23:47.566769: Average global foreground Dice: [0.9646192172425676, 0.9566347155243806] 
+2020-07-12 07:23:47.567708: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:23:48.741301: lr: 0.002497 
+2020-07-12 07:23:48.742477: This epoch took 233.702299 s
+ 
+2020-07-12 07:23:48.743183: 
+epoch:  786 
+2020-07-12 07:27:25.133012: train loss : -0.8892 
+2020-07-12 07:27:41.391120: validation loss: -0.8869 
+2020-07-12 07:27:41.392770: Average global foreground Dice: [0.9642270383068834, 0.9601002391223331] 
+2020-07-12 07:27:41.393708: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:27:42.568209: lr: 0.002486 
+2020-07-12 07:27:42.569395: This epoch took 233.825531 s
+ 
+2020-07-12 07:27:42.570117: 
+epoch:  787 
+2020-07-12 07:31:18.865341: train loss : -0.8885 
+2020-07-12 07:31:35.119486: validation loss: -0.8786 
+2020-07-12 07:31:35.121280: Average global foreground Dice: [0.9648910877684642, 0.959461871302859] 
+2020-07-12 07:31:35.122314: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:31:36.299717: lr: 0.002476 
+2020-07-12 07:31:36.300954: This epoch took 233.730234 s
+ 
+2020-07-12 07:31:36.301783: 
+epoch:  788 
+2020-07-12 07:35:12.606810: train loss : -0.8899 
+2020-07-12 07:35:28.912841: validation loss: -0.8771 
+2020-07-12 07:35:28.914558: Average global foreground Dice: [0.9617289481635246, 0.9568583794476103] 
+2020-07-12 07:35:28.915459: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:35:30.094154: lr: 0.002465 
+2020-07-12 07:35:30.095419: This epoch took 233.792834 s
+ 
+2020-07-12 07:35:30.096144: 
+epoch:  789 
+2020-07-12 07:39:06.442145: train loss : -0.8985 
+2020-07-12 07:39:22.701422: validation loss: -0.8988 
+2020-07-12 07:39:22.703111: Average global foreground Dice: [0.9690543108306525, 0.960807308906472] 
+2020-07-12 07:39:22.704098: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:39:23.873244: lr: 0.002455 
+2020-07-12 07:39:23.874427: This epoch took 233.777586 s
+ 
+2020-07-12 07:39:23.875169: 
+epoch:  790 
+2020-07-12 07:43:00.192703: train loss : -0.8914 
+2020-07-12 07:43:16.518102: validation loss: -0.8761 
+2020-07-12 07:43:16.520024: Average global foreground Dice: [0.9661610653488448, 0.9579391955468078] 
+2020-07-12 07:43:16.521154: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:43:17.738439: lr: 0.002444 
+2020-07-12 07:43:17.739576: This epoch took 233.863737 s
+ 
+2020-07-12 07:43:17.740223: 
+epoch:  791 
+2020-07-12 07:46:53.928203: train loss : -0.8948 
+2020-07-12 07:47:10.215897: validation loss: -0.8928 
+2020-07-12 07:47:10.217669: Average global foreground Dice: [0.9661833008320683, 0.9579568935766662] 
+2020-07-12 07:47:10.218480: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:47:11.390348: lr: 0.002434 
+2020-07-12 07:47:11.391485: This epoch took 233.650668 s
+ 
+2020-07-12 07:47:11.392104: 
+epoch:  792 
+2020-07-12 07:50:47.728955: train loss : -0.8918 
+2020-07-12 07:51:04.015662: validation loss: -0.8977 
+2020-07-12 07:51:04.017319: Average global foreground Dice: [0.9656823124501738, 0.9612457572697906] 
+2020-07-12 07:51:04.018409: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:51:05.188531: lr: 0.002423 
+2020-07-12 07:51:05.189723: This epoch took 233.797028 s
+ 
+2020-07-12 07:51:05.190615: 
+epoch:  793 
+2020-07-12 07:54:41.419271: train loss : -0.8948 
+2020-07-12 07:54:57.668005: validation loss: -0.8848 
+2020-07-12 07:54:57.669672: Average global foreground Dice: [0.963076598409235, 0.9548111934928838] 
+2020-07-12 07:54:57.670620: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:54:58.849015: lr: 0.002413 
+2020-07-12 07:54:58.850215: This epoch took 233.658923 s
+ 
+2020-07-12 07:54:58.851018: 
+epoch:  794 
+2020-07-12 07:58:35.237138: train loss : -0.8915 
+2020-07-12 07:58:51.537879: validation loss: -0.8874 
+2020-07-12 07:58:51.539551: Average global foreground Dice: [0.9634156561396503, 0.9565738698621556] 
+2020-07-12 07:58:51.540448: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 07:58:52.713829: lr: 0.002402 
+2020-07-12 07:58:52.715006: This epoch took 233.863251 s
+ 
+2020-07-12 07:58:52.715757: 
+epoch:  795 
+2020-07-12 08:02:28.986696: train loss : -0.8901 
+2020-07-12 08:02:45.279519: validation loss: -0.8879 
+2020-07-12 08:02:45.281347: Average global foreground Dice: [0.9644305806662679, 0.9633743565574242] 
+2020-07-12 08:02:45.282339: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:02:46.456549: lr: 0.002391 
+2020-07-12 08:02:46.457748: This epoch took 233.741246 s
+ 
+2020-07-12 08:02:46.458431: 
+epoch:  796 
+2020-07-12 08:06:22.767665: train loss : -0.8942 
+2020-07-12 08:06:39.037543: validation loss: -0.8891 
+2020-07-12 08:06:39.039208: Average global foreground Dice: [0.9667476066890682, 0.9604061030260601] 
+2020-07-12 08:06:39.040250: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:06:40.212148: lr: 0.002381 
+2020-07-12 08:06:40.213348: This epoch took 233.754220 s
+ 
+2020-07-12 08:06:40.214251: 
+epoch:  797 
+2020-07-12 08:10:16.547118: train loss : -0.8950 
+2020-07-12 08:10:32.821330: validation loss: -0.8857 
+2020-07-12 08:10:32.823068: Average global foreground Dice: [0.967970252889106, 0.9603503181936806] 
+2020-07-12 08:10:32.824097: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:10:33.995577: lr: 0.00237 
+2020-07-12 08:10:33.996771: This epoch took 233.781879 s
+ 
+2020-07-12 08:10:33.997524: 
+epoch:  798 
+2020-07-12 08:14:10.370190: train loss : -0.8972 
+2020-07-12 08:14:26.636549: validation loss: -0.8969 
+2020-07-12 08:14:26.638186: Average global foreground Dice: [0.9694604447226512, 0.960834621662496] 
+2020-07-12 08:14:26.639089: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:14:27.811973: lr: 0.00236 
+2020-07-12 08:14:27.813163: This epoch took 233.814929 s
+ 
+2020-07-12 08:14:27.813813: 
+epoch:  799 
+2020-07-12 08:18:04.124130: train loss : -0.8952 
+2020-07-12 08:18:20.400150: validation loss: -0.8915 
+2020-07-12 08:18:20.402276: Average global foreground Dice: [0.9618292312284236, 0.9588580922095725] 
+2020-07-12 08:18:20.403255: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:18:21.574472: lr: 0.002349 
+2020-07-12 08:18:21.575734: saving scheduled checkpoint file... 
+2020-07-12 08:18:21.612427: saving checkpoint... 
+2020-07-12 08:18:22.117496: done, saving took 0.54 seconds 
+2020-07-12 08:18:22.141402: done 
+2020-07-12 08:18:22.142407: This epoch took 234.327804 s
+ 
+2020-07-12 08:18:22.143087: 
+epoch:  800 
+2020-07-12 08:21:58.386060: train loss : -0.8935 
+2020-07-12 08:22:14.666203: validation loss: -0.8898 
+2020-07-12 08:22:14.668004: Average global foreground Dice: [0.9637159819023899, 0.9607978869535563] 
+2020-07-12 08:22:14.668968: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:22:15.838465: lr: 0.002339 
+2020-07-12 08:22:15.839597: This epoch took 233.695883 s
+ 
+2020-07-12 08:22:15.840418: 
+epoch:  801 
+2020-07-12 08:25:52.140578: train loss : -0.8895 
+2020-07-12 08:26:08.502677: validation loss: -0.8888 
+2020-07-12 08:26:08.504267: Average global foreground Dice: [0.9664710268649691, 0.9597398777984014] 
+2020-07-12 08:26:08.505277: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:26:09.673995: lr: 0.002328 
+2020-07-12 08:26:09.675188: This epoch took 233.834055 s
+ 
+2020-07-12 08:26:09.675879: 
+epoch:  802 
+2020-07-12 08:29:45.945800: train loss : -0.8963 
+2020-07-12 08:30:02.205305: validation loss: -0.8913 
+2020-07-12 08:30:02.207153: Average global foreground Dice: [0.965421859341722, 0.9590504959328772] 
+2020-07-12 08:30:02.208016: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:30:03.377264: lr: 0.002317 
+2020-07-12 08:30:03.378529: This epoch took 233.701943 s
+ 
+2020-07-12 08:30:03.379363: 
+epoch:  803 
+2020-07-12 08:33:39.653568: train loss : -0.8920 
+2020-07-12 08:33:55.923624: validation loss: -0.8720 
+2020-07-12 08:33:55.925471: Average global foreground Dice: [0.9581844624685074, 0.9486583188483086] 
+2020-07-12 08:33:55.926418: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:33:57.108577: lr: 0.002307 
+2020-07-12 08:33:57.109721: This epoch took 233.729457 s
+ 
+2020-07-12 08:33:57.110405: 
+epoch:  804 
+2020-07-12 08:37:33.291019: train loss : -0.8881 
+2020-07-12 08:37:49.580100: validation loss: -0.8933 
+2020-07-12 08:37:49.581838: Average global foreground Dice: [0.9650614642581077, 0.9621908546381284] 
+2020-07-12 08:37:49.582815: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:37:50.756051: lr: 0.002296 
+2020-07-12 08:37:50.757219: This epoch took 233.646003 s
+ 
+2020-07-12 08:37:50.758069: 
+epoch:  805 
+2020-07-12 08:41:27.027383: train loss : -0.8878 
+2020-07-12 08:41:43.277833: validation loss: -0.8791 
+2020-07-12 08:41:43.279511: Average global foreground Dice: [0.9609842934730491, 0.9547388894099547] 
+2020-07-12 08:41:43.280461: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:41:44.452896: lr: 0.002286 
+2020-07-12 08:41:44.454025: This epoch took 233.695238 s
+ 
+2020-07-12 08:41:44.454910: 
+epoch:  806 
+2020-07-12 08:45:20.728481: train loss : -0.8936 
+2020-07-12 08:45:36.983137: validation loss: -0.8971 
+2020-07-12 08:45:36.984938: Average global foreground Dice: [0.9624450932547133, 0.962174030784383] 
+2020-07-12 08:45:36.985869: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:45:38.159298: lr: 0.002275 
+2020-07-12 08:45:38.175187: This epoch took 233.719389 s
+ 
+2020-07-12 08:45:38.176018: 
+epoch:  807 
+2020-07-12 08:49:14.507111: train loss : -0.8923 
+2020-07-12 08:49:30.789527: validation loss: -0.8910 
+2020-07-12 08:49:30.791284: Average global foreground Dice: [0.9645227428948259, 0.9586053596481332] 
+2020-07-12 08:49:30.792265: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:49:31.964194: lr: 0.002264 
+2020-07-12 08:49:31.965594: This epoch took 233.788749 s
+ 
+2020-07-12 08:49:31.966378: 
+epoch:  808 
+2020-07-12 08:53:08.283126: train loss : -0.8927 
+2020-07-12 08:53:24.566613: validation loss: -0.8921 
+2020-07-12 08:53:24.568280: Average global foreground Dice: [0.9653627800705235, 0.9566936339859323] 
+2020-07-12 08:53:24.569268: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:53:25.741918: lr: 0.002254 
+2020-07-12 08:53:25.743176: This epoch took 233.776059 s
+ 
+2020-07-12 08:53:25.744051: 
+epoch:  809 
+2020-07-12 08:57:02.038051: train loss : -0.8931 
+2020-07-12 08:57:18.321430: validation loss: -0.8990 
+2020-07-12 08:57:18.323126: Average global foreground Dice: [0.9689020787223516, 0.9609529987370784] 
+2020-07-12 08:57:18.324098: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 08:57:19.495581: lr: 0.002243 
+2020-07-12 08:57:19.496730: This epoch took 233.752014 s
+ 
+2020-07-12 08:57:19.497422: 
+epoch:  810 
+2020-07-12 09:00:55.648277: train loss : -0.8934 
+2020-07-12 09:01:11.933659: validation loss: -0.8935 
+2020-07-12 09:01:11.935501: Average global foreground Dice: [0.9691469793142181, 0.9582210379909645] 
+2020-07-12 09:01:11.936449: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:01:13.109307: lr: 0.002233 
+2020-07-12 09:01:13.110647: This epoch took 233.612438 s
+ 
+2020-07-12 09:01:13.111306: 
+epoch:  811 
+2020-07-12 09:04:49.335547: train loss : -0.8877 
+2020-07-12 09:05:05.593034: validation loss: -0.8974 
+2020-07-12 09:05:05.594730: Average global foreground Dice: [0.9676589401087329, 0.9617006363459858] 
+2020-07-12 09:05:05.595685: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:05:06.766429: lr: 0.002222 
+2020-07-12 09:05:06.767558: This epoch took 233.655561 s
+ 
+2020-07-12 09:05:06.787724: 
+epoch:  812 
+2020-07-12 09:08:43.203590: train loss : -0.8903 
+2020-07-12 09:08:59.496535: validation loss: -0.8887 
+2020-07-12 09:08:59.498230: Average global foreground Dice: [0.967423053980308, 0.9592110397992587] 
+2020-07-12 09:08:59.499098: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:09:00.670142: lr: 0.002211 
+2020-07-12 09:09:00.671359: This epoch took 233.882787 s
+ 
+2020-07-12 09:09:00.672063: 
+epoch:  813 
+2020-07-12 09:12:37.225395: train loss : -0.8930 
+2020-07-12 09:12:53.510070: validation loss: -0.8946 
+2020-07-12 09:12:53.511744: Average global foreground Dice: [0.9669845086011076, 0.9615135298153711] 
+2020-07-12 09:12:53.512662: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:12:54.686015: lr: 0.002201 
+2020-07-12 09:12:54.687165: This epoch took 234.014417 s
+ 
+2020-07-12 09:12:54.687819: 
+epoch:  814 
+2020-07-12 09:16:31.226893: train loss : -0.8922 
+2020-07-12 09:16:47.508368: validation loss: -0.8992 
+2020-07-12 09:16:47.510177: Average global foreground Dice: [0.9640339185257721, 0.9633095404459783] 
+2020-07-12 09:16:47.511129: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:16:48.683971: lr: 0.00219 
+2020-07-12 09:16:48.685145: This epoch took 233.996626 s
+ 
+2020-07-12 09:16:48.685880: 
+epoch:  815 
+2020-07-12 09:20:25.264293: train loss : -0.8907 
+2020-07-12 09:20:41.535955: validation loss: -0.8806 
+2020-07-12 09:20:41.537589: Average global foreground Dice: [0.9622843760671123, 0.9543546484896114] 
+2020-07-12 09:20:41.538568: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:20:42.736084: lr: 0.002179 
+2020-07-12 09:20:42.737283: This epoch took 234.050656 s
+ 
+2020-07-12 09:20:42.738038: 
+epoch:  816 
+2020-07-12 09:24:19.271556: train loss : -0.8874 
+2020-07-12 09:24:35.547728: validation loss: -0.8875 
+2020-07-12 09:24:35.549441: Average global foreground Dice: [0.9665358799731071, 0.9576343591415112] 
+2020-07-12 09:24:35.550340: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:24:36.720899: lr: 0.002169 
+2020-07-12 09:24:36.722073: This epoch took 233.983396 s
+ 
+2020-07-12 09:24:36.722812: 
+epoch:  817 
+2020-07-12 09:28:13.415336: train loss : -0.8892 
+2020-07-12 09:28:29.696455: validation loss: -0.8935 
+2020-07-12 09:28:29.698192: Average global foreground Dice: [0.9671084167460848, 0.9596984832998644] 
+2020-07-12 09:28:29.699124: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:28:30.871056: lr: 0.002158 
+2020-07-12 09:28:30.872144: This epoch took 234.148569 s
+ 
+2020-07-12 09:28:30.872837: 
+epoch:  818 
+2020-07-12 09:32:07.466825: train loss : -0.8891 
+2020-07-12 09:32:23.782965: validation loss: -0.8958 
+2020-07-12 09:32:23.785037: Average global foreground Dice: [0.9675095612793109, 0.9607411911907143] 
+2020-07-12 09:32:23.785994: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:32:24.959133: lr: 0.002147 
+2020-07-12 09:32:24.960253: This epoch took 234.086751 s
+ 
+2020-07-12 09:32:24.961015: 
+epoch:  819 
+2020-07-12 09:36:01.609982: train loss : -0.8955 
+2020-07-12 09:36:17.941199: validation loss: -0.8965 
+2020-07-12 09:36:17.942792: Average global foreground Dice: [0.9696666480606021, 0.9610411349311253] 
+2020-07-12 09:36:17.943743: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:36:19.109669: lr: 0.002137 
+2020-07-12 09:36:19.147077: saving checkpoint... 
+2020-07-12 09:36:21.174099: done, saving took 2.06 seconds 
+2020-07-12 09:36:21.202098: This epoch took 236.240396 s
+ 
+2020-07-12 09:36:21.203106: 
+epoch:  820 
+2020-07-12 09:39:57.843287: train loss : -0.8859 
+2020-07-12 09:40:14.136523: validation loss: -0.8938 
+2020-07-12 09:40:14.138159: Average global foreground Dice: [0.9679996996087571, 0.9579372384990955] 
+2020-07-12 09:40:14.138883: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:40:15.386118: lr: 0.002126 
+2020-07-12 09:40:15.423535: saving checkpoint... 
+2020-07-12 09:40:17.494212: done, saving took 2.11 seconds 
+2020-07-12 09:40:17.518441: This epoch took 236.314626 s
+ 
+2020-07-12 09:40:17.519343: 
+epoch:  821 
+2020-07-12 09:43:54.231243: train loss : -0.8966 
+2020-07-12 09:44:10.538466: validation loss: -0.8956 
+2020-07-12 09:44:10.540257: Average global foreground Dice: [0.9640082351230266, 0.9602847073862072] 
+2020-07-12 09:44:10.541317: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:44:11.708277: lr: 0.002115 
+2020-07-12 09:44:11.709696: This epoch took 234.189558 s
+ 
+2020-07-12 09:44:11.710595: 
+epoch:  822 
+2020-07-12 09:47:48.437857: train loss : -0.8933 
+2020-07-12 09:48:04.725122: validation loss: -0.8981 
+2020-07-12 09:48:04.726975: Average global foreground Dice: [0.9664769664775592, 0.9604294398035508] 
+2020-07-12 09:48:04.727948: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:48:05.894565: lr: 0.002105 
+2020-07-12 09:48:05.932889: saving checkpoint... 
+2020-07-12 09:48:08.208874: done, saving took 2.31 seconds 
+2020-07-12 09:48:08.232990: This epoch took 236.521555 s
+ 
+2020-07-12 09:48:08.234028: 
+epoch:  823 
+2020-07-12 09:51:44.943588: train loss : -0.9026 
+2020-07-12 09:52:01.230810: validation loss: -0.8921 
+2020-07-12 09:52:01.232460: Average global foreground Dice: [0.9672734218412501, 0.9616989500308583] 
+2020-07-12 09:52:01.233363: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:52:02.406179: lr: 0.002094 
+2020-07-12 09:52:02.444741: saving checkpoint... 
+2020-07-12 09:52:04.755421: done, saving took 2.35 seconds 
+2020-07-12 09:52:04.790709: This epoch took 236.555963 s
+ 
+2020-07-12 09:52:04.791885: 
+epoch:  824 
+2020-07-12 09:55:41.525383: train loss : -0.8920 
+2020-07-12 09:55:57.794095: validation loss: -0.8968 
+2020-07-12 09:55:57.795767: Average global foreground Dice: [0.9677222462568723, 0.9589349163587088] 
+2020-07-12 09:55:57.796712: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:55:58.960289: lr: 0.002083 
+2020-07-12 09:55:58.998040: saving checkpoint... 
+2020-07-12 09:56:01.248152: done, saving took 2.29 seconds 
+2020-07-12 09:56:01.271831: This epoch took 236.479220 s
+ 
+2020-07-12 09:56:01.272658: 
+epoch:  825 
+2020-07-12 09:59:37.913285: train loss : -0.8963 
+2020-07-12 09:59:54.215549: validation loss: -0.8977 
+2020-07-12 09:59:54.217191: Average global foreground Dice: [0.9689550042354159, 0.9611994842767726] 
+2020-07-12 09:59:54.218118: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 09:59:55.381190: lr: 0.002072 
+2020-07-12 09:59:55.418410: saving checkpoint... 
+2020-07-12 09:59:57.524577: done, saving took 2.14 seconds 
+2020-07-12 09:59:57.559921: This epoch took 236.286646 s
+ 
+2020-07-12 09:59:57.560862: 
+epoch:  826 
+2020-07-12 10:03:34.164331: train loss : -0.8965 
+2020-07-12 10:03:50.442242: validation loss: -0.8947 
+2020-07-12 10:03:50.444027: Average global foreground Dice: [0.9665250381080692, 0.961223316952089] 
+2020-07-12 10:03:50.444989: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:03:51.605985: lr: 0.002062 
+2020-07-12 10:03:51.643250: saving checkpoint... 
+2020-07-12 10:03:54.066995: done, saving took 2.46 seconds 
+2020-07-12 10:03:54.103963: This epoch took 236.542403 s
+ 
+2020-07-12 10:03:54.105013: 
+epoch:  827 
+2020-07-12 10:07:30.738651: train loss : -0.8960 
+2020-07-12 10:07:47.007071: validation loss: -0.8915 
+2020-07-12 10:07:47.008770: Average global foreground Dice: [0.9695341677433651, 0.9574011276671406] 
+2020-07-12 10:07:47.009689: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:07:48.182312: lr: 0.002051 
+2020-07-12 10:07:48.219687: saving checkpoint... 
+2020-07-12 10:07:50.528175: done, saving took 2.34 seconds 
+2020-07-12 10:07:50.565554: This epoch took 236.459832 s
+ 
+2020-07-12 10:07:50.566475: 
+epoch:  828 
+2020-07-12 10:11:27.380324: train loss : -0.8915 
+2020-07-12 10:11:43.693831: validation loss: -0.8903 
+2020-07-12 10:11:43.695529: Average global foreground Dice: [0.965185627827098, 0.9574177804384598] 
+2020-07-12 10:11:43.696454: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:11:44.957874: lr: 0.00204 
+2020-07-12 10:11:44.959069: This epoch took 234.391881 s
+ 
+2020-07-12 10:11:44.959795: 
+epoch:  829 
+2020-07-12 10:15:21.740486: train loss : -0.8975 
+2020-07-12 10:15:38.011773: validation loss: -0.9004 
+2020-07-12 10:15:38.013385: Average global foreground Dice: [0.9664765108696869, 0.9609830570879411] 
+2020-07-12 10:15:38.014276: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:15:39.178218: lr: 0.00203 
+2020-07-12 10:15:39.179335: This epoch took 234.218962 s
+ 
+2020-07-12 10:15:39.180132: 
+epoch:  830 
+2020-07-12 10:19:15.556771: train loss : -0.8988 
+2020-07-12 10:19:31.819990: validation loss: -0.8943 
+2020-07-12 10:19:31.821777: Average global foreground Dice: [0.9674649041088786, 0.9596696079293168] 
+2020-07-12 10:19:31.822716: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:19:32.988004: lr: 0.002019 
+2020-07-12 10:19:32.989139: This epoch took 233.808391 s
+ 
+2020-07-12 10:19:32.989860: 
+epoch:  831 
+2020-07-12 10:23:09.282685: train loss : -0.8985 
+2020-07-12 10:23:25.505693: validation loss: -0.8869 
+2020-07-12 10:23:25.507476: Average global foreground Dice: [0.9649047659436298, 0.9595014892411481] 
+2020-07-12 10:23:25.508471: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:23:26.671512: lr: 0.002008 
+2020-07-12 10:23:26.672693: This epoch took 233.682214 s
+ 
+2020-07-12 10:23:26.673409: 
+epoch:  832 
+2020-07-12 10:27:02.876726: train loss : -0.8958 
+2020-07-12 10:27:19.162769: validation loss: -0.8855 
+2020-07-12 10:27:19.164411: Average global foreground Dice: [0.961775857892124, 0.9564515826922235] 
+2020-07-12 10:27:19.165316: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:27:20.327018: lr: 0.001997 
+2020-07-12 10:27:20.328200: This epoch took 233.654168 s
+ 
+2020-07-12 10:27:20.328861: 
+epoch:  833 
+2020-07-12 10:30:56.725427: train loss : -0.9011 
+2020-07-12 10:31:12.969629: validation loss: -0.8854 
+2020-07-12 10:31:12.971243: Average global foreground Dice: [0.9654433132960611, 0.9583874981829071] 
+2020-07-12 10:31:12.972212: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:31:14.135793: lr: 0.001987 
+2020-07-12 10:31:14.136852: This epoch took 233.807245 s
+ 
+2020-07-12 10:31:14.137633: 
+epoch:  834 
+2020-07-12 10:34:50.545857: train loss : -0.9006 
+2020-07-12 10:35:06.802351: validation loss: -0.8894 
+2020-07-12 10:35:06.804093: Average global foreground Dice: [0.9649881111759567, 0.9597027480889497] 
+2020-07-12 10:35:06.805007: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:35:07.978278: lr: 0.001976 
+2020-07-12 10:35:07.979397: This epoch took 233.841069 s
+ 
+2020-07-12 10:35:07.980051: 
+epoch:  835 
+2020-07-12 10:38:44.391514: train loss : -0.8978 
+2020-07-12 10:39:00.609027: validation loss: -0.8895 
+2020-07-12 10:39:00.610913: Average global foreground Dice: [0.9639635965653605, 0.9595289124718102] 
+2020-07-12 10:39:00.611997: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:39:01.776837: lr: 0.001965 
+2020-07-12 10:39:01.777996: This epoch took 233.797237 s
+ 
+2020-07-12 10:39:01.778752: 
+epoch:  836 
+2020-07-12 10:42:38.256636: train loss : -0.8992 
+2020-07-12 10:42:54.498918: validation loss: -0.8997 
+2020-07-12 10:42:54.500656: Average global foreground Dice: [0.9641767240549506, 0.9630616374510481] 
+2020-07-12 10:42:54.501657: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:42:55.668961: lr: 0.001954 
+2020-07-12 10:42:55.670064: This epoch took 233.890697 s
+ 
+2020-07-12 10:42:55.670706: 
+epoch:  837 
+2020-07-12 10:46:31.990383: train loss : -0.8946 
+2020-07-12 10:46:48.236484: validation loss: -0.8854 
+2020-07-12 10:46:48.238134: Average global foreground Dice: [0.9655263089342105, 0.9614985998475627] 
+2020-07-12 10:46:48.239099: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:46:49.399161: lr: 0.001943 
+2020-07-12 10:46:49.430356: This epoch took 233.758977 s
+ 
+2020-07-12 10:46:49.431493: 
+epoch:  838 
+2020-07-12 10:50:25.917303: train loss : -0.8975 
+2020-07-12 10:50:42.164710: validation loss: -0.8962 
+2020-07-12 10:50:42.166494: Average global foreground Dice: [0.9680645616137304, 0.9610721659388943] 
+2020-07-12 10:50:42.167351: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:50:43.334090: lr: 0.001933 
+2020-07-12 10:50:43.335166: This epoch took 233.902732 s
+ 
+2020-07-12 10:50:43.335771: 
+epoch:  839 
+2020-07-12 10:54:19.701101: train loss : -0.8971 
+2020-07-12 10:54:35.963415: validation loss: -0.8980 
+2020-07-12 10:54:35.964853: Average global foreground Dice: [0.9680000349719043, 0.9588108346224711] 
+2020-07-12 10:54:35.965773: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:54:37.129183: lr: 0.001922 
+2020-07-12 10:54:37.130334: This epoch took 233.793980 s
+ 
+2020-07-12 10:54:37.131088: 
+epoch:  840 
+2020-07-12 10:58:13.464401: train loss : -0.8924 
+2020-07-12 10:58:29.769033: validation loss: -0.8786 
+2020-07-12 10:58:29.770744: Average global foreground Dice: [0.9628442751294197, 0.9554193201994811] 
+2020-07-12 10:58:29.771725: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 10:58:30.960397: lr: 0.001911 
+2020-07-12 10:58:30.961491: This epoch took 233.829718 s
+ 
+2020-07-12 10:58:30.962284: 
+epoch:  841 
+2020-07-12 11:02:07.325545: train loss : -0.8924 
+2020-07-12 11:02:23.589730: validation loss: -0.8855 
+2020-07-12 11:02:23.591388: Average global foreground Dice: [0.9651518452210992, 0.9618859159303392] 
+2020-07-12 11:02:23.592254: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:02:24.756275: lr: 0.0019 
+2020-07-12 11:02:24.757376: This epoch took 233.794451 s
+ 
+2020-07-12 11:02:24.757988: 
+epoch:  842 
+2020-07-12 11:06:01.200366: train loss : -0.8958 
+2020-07-12 11:06:17.452634: validation loss: -0.8977 
+2020-07-12 11:06:17.454363: Average global foreground Dice: [0.9671507954187712, 0.9585515797561239] 
+2020-07-12 11:06:17.455127: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:06:18.615500: lr: 0.001889 
+2020-07-12 11:06:18.616597: This epoch took 233.858021 s
+ 
+2020-07-12 11:06:18.617229: 
+epoch:  843 
+2020-07-12 11:09:54.964764: train loss : -0.8951 
+2020-07-12 11:10:11.199135: validation loss: -0.8841 
+2020-07-12 11:10:11.201083: Average global foreground Dice: [0.9647632074332869, 0.9571207901798366] 
+2020-07-12 11:10:11.202127: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:10:12.378631: lr: 0.001879 
+2020-07-12 11:10:12.379815: This epoch took 233.761995 s
+ 
+2020-07-12 11:10:12.380619: 
+epoch:  844 
+2020-07-12 11:13:48.794078: train loss : -0.8948 
+2020-07-12 11:14:05.065188: validation loss: -0.8856 
+2020-07-12 11:14:05.066815: Average global foreground Dice: [0.9667198711038, 0.9630384824935854] 
+2020-07-12 11:14:05.067735: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:14:06.232329: lr: 0.001868 
+2020-07-12 11:14:06.233488: This epoch took 233.852067 s
+ 
+2020-07-12 11:14:06.234216: 
+epoch:  845 
+2020-07-12 11:17:42.683453: train loss : -0.9002 
+2020-07-12 11:17:58.945179: validation loss: -0.8894 
+2020-07-12 11:17:58.946783: Average global foreground Dice: [0.9670880454821872, 0.9608514180971915] 
+2020-07-12 11:17:58.947705: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:18:00.111995: lr: 0.001857 
+2020-07-12 11:18:00.113613: This epoch took 233.878773 s
+ 
+2020-07-12 11:18:00.114402: 
+epoch:  846 
+2020-07-12 11:21:36.479948: train loss : -0.8915 
+2020-07-12 11:21:52.755777: validation loss: -0.8959 
+2020-07-12 11:21:52.757417: Average global foreground Dice: [0.9691342933778069, 0.9607625493621412] 
+2020-07-12 11:21:52.758260: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:21:53.928968: lr: 0.001846 
+2020-07-12 11:21:53.930144: This epoch took 233.815045 s
+ 
+2020-07-12 11:21:53.930748: 
+epoch:  847 
+2020-07-12 11:25:30.232088: train loss : -0.8948 
+2020-07-12 11:25:46.474510: validation loss: -0.9000 
+2020-07-12 11:25:46.476023: Average global foreground Dice: [0.9667634468706435, 0.9613524631149326] 
+2020-07-12 11:25:46.476904: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:25:47.674509: lr: 0.001835 
+2020-07-12 11:25:47.675657: This epoch took 233.744343 s
+ 
+2020-07-12 11:25:47.676449: 
+epoch:  848 
+2020-07-12 11:29:24.006470: train loss : -0.8972 
+2020-07-12 11:29:40.257169: validation loss: -0.8950 
+2020-07-12 11:29:40.258822: Average global foreground Dice: [0.9667378695823088, 0.959804354809639] 
+2020-07-12 11:29:40.259809: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:29:41.423181: lr: 0.001824 
+2020-07-12 11:29:41.424343: This epoch took 233.747221 s
+ 
+2020-07-12 11:29:41.425027: 
+epoch:  849 
+2020-07-12 11:33:17.747193: train loss : -0.9015 
+2020-07-12 11:33:34.040503: validation loss: -0.8951 
+2020-07-12 11:33:34.042147: Average global foreground Dice: [0.9660787459313902, 0.9585752515923355] 
+2020-07-12 11:33:34.043162: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:33:35.209230: lr: 0.001813 
+2020-07-12 11:33:35.210382: saving scheduled checkpoint file... 
+2020-07-12 11:33:35.247409: saving checkpoint... 
+2020-07-12 11:33:35.735448: done, saving took 0.52 seconds 
+2020-07-12 11:33:35.758771: done 
+2020-07-12 11:33:35.759657: This epoch took 234.333909 s
+ 
+2020-07-12 11:33:35.760412: 
+epoch:  850 
+2020-07-12 11:37:12.073329: train loss : -0.8974 
+2020-07-12 11:37:28.334207: validation loss: -0.8993 
+2020-07-12 11:37:28.336081: Average global foreground Dice: [0.965871893976435, 0.9604808525511347] 
+2020-07-12 11:37:28.337027: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:37:29.504150: lr: 0.001802 
+2020-07-12 11:37:29.505345: This epoch took 233.744246 s
+ 
+2020-07-12 11:37:29.506121: 
+epoch:  851 
+2020-07-12 11:41:05.847361: train loss : -0.8957 
+2020-07-12 11:41:22.115106: validation loss: -0.8917 
+2020-07-12 11:41:22.116737: Average global foreground Dice: [0.966233718712408, 0.9590117991268738] 
+2020-07-12 11:41:22.117709: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:41:23.283290: lr: 0.001792 
+2020-07-12 11:41:23.284479: This epoch took 233.777654 s
+ 
+2020-07-12 11:41:23.285156: 
+epoch:  852 
+2020-07-12 11:44:59.650924: train loss : -0.8949 
+2020-07-12 11:45:15.910637: validation loss: -0.8901 
+2020-07-12 11:45:15.912354: Average global foreground Dice: [0.9667249184756344, 0.9568866852583813] 
+2020-07-12 11:45:15.913411: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:45:17.078009: lr: 0.001781 
+2020-07-12 11:45:17.079142: This epoch took 233.793334 s
+ 
+2020-07-12 11:45:17.079944: 
+epoch:  853 
+2020-07-12 11:48:53.193240: train loss : -0.9004 
+2020-07-12 11:49:09.447360: validation loss: -0.8967 
+2020-07-12 11:49:09.449056: Average global foreground Dice: [0.9667286703584967, 0.9602644179809214] 
+2020-07-12 11:49:09.450001: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:49:10.615260: lr: 0.00177 
+2020-07-12 11:49:10.616394: This epoch took 233.535816 s
+ 
+2020-07-12 11:49:10.617148: 
+epoch:  854 
+2020-07-12 11:52:47.058181: train loss : -0.8957 
+2020-07-12 11:53:03.333314: validation loss: -0.8956 
+2020-07-12 11:53:03.335132: Average global foreground Dice: [0.9648198276136248, 0.9625354494681787] 
+2020-07-12 11:53:03.336073: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:53:04.505646: lr: 0.001759 
+2020-07-12 11:53:04.506791: This epoch took 233.889024 s
+ 
+2020-07-12 11:53:04.507514: 
+epoch:  855 
+2020-07-12 11:56:40.825741: train loss : -0.8982 
+2020-07-12 11:56:57.099517: validation loss: -0.8913 
+2020-07-12 11:56:57.101272: Average global foreground Dice: [0.9678312461665366, 0.9575540313400529] 
+2020-07-12 11:56:57.102194: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 11:56:58.268145: lr: 0.001748 
+2020-07-12 11:56:58.269243: This epoch took 233.761029 s
+ 
+2020-07-12 11:56:58.270025: 
+epoch:  856 
+2020-07-12 12:00:34.769393: train loss : -0.8963 
+2020-07-12 12:00:50.992692: validation loss: -0.8905 
+2020-07-12 12:00:50.994457: Average global foreground Dice: [0.9686608707598905, 0.9596230753272861] 
+2020-07-12 12:00:50.995472: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:00:52.165435: lr: 0.001737 
+2020-07-12 12:00:52.166544: This epoch took 233.895898 s
+ 
+2020-07-12 12:00:52.167334: 
+epoch:  857 
+2020-07-12 12:04:28.505333: train loss : -0.9028 
+2020-07-12 12:04:44.809772: validation loss: -0.8972 
+2020-07-12 12:04:44.811467: Average global foreground Dice: [0.9654742128231033, 0.9610247077652868] 
+2020-07-12 12:04:44.812395: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:04:45.974816: lr: 0.001726 
+2020-07-12 12:04:45.975891: This epoch took 233.807932 s
+ 
+2020-07-12 12:04:45.976678: 
+epoch:  858 
+2020-07-12 12:08:22.449663: train loss : -0.9035 
+2020-07-12 12:08:38.701458: validation loss: -0.9012 
+2020-07-12 12:08:38.703264: Average global foreground Dice: [0.9659784158510871, 0.9624636623725162] 
+2020-07-12 12:08:38.704175: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:08:39.869914: lr: 0.001715 
+2020-07-12 12:08:39.871075: This epoch took 233.893764 s
+ 
+2020-07-12 12:08:39.871820: 
+epoch:  859 
+2020-07-12 12:12:16.201723: train loss : -0.9013 
+2020-07-12 12:12:32.477448: validation loss: -0.9014 
+2020-07-12 12:12:32.479097: Average global foreground Dice: [0.9667819783056945, 0.9625137376706868] 
+2020-07-12 12:12:32.479973: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:12:33.666214: lr: 0.001704 
+2020-07-12 12:12:33.703740: saving checkpoint... 
+2020-07-12 12:12:35.817795: done, saving took 2.15 seconds 
+2020-07-12 12:12:35.845379: This epoch took 235.972857 s
+ 
+2020-07-12 12:12:35.846395: 
+epoch:  860 
+2020-07-12 12:16:12.618166: train loss : -0.8982 
+2020-07-12 12:16:28.955144: validation loss: -0.8984 
+2020-07-12 12:16:28.956818: Average global foreground Dice: [0.9664055353767123, 0.9599095015584165] 
+2020-07-12 12:16:28.957766: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:16:30.119878: lr: 0.001693 
+2020-07-12 12:16:30.121081: This epoch took 234.273978 s
+ 
+2020-07-12 12:16:30.121805: 
+epoch:  861 
+2020-07-12 12:20:06.856586: train loss : -0.9055 
+2020-07-12 12:20:23.159135: validation loss: -0.8860 
+2020-07-12 12:20:23.160835: Average global foreground Dice: [0.9691700254783252, 0.9589565441843401] 
+2020-07-12 12:20:23.161772: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:20:24.325872: lr: 0.001682 
+2020-07-12 12:20:24.363232: saving checkpoint... 
+2020-07-12 12:20:26.595423: done, saving took 2.27 seconds 
+2020-07-12 12:20:26.625994: This epoch took 236.503564 s
+ 
+2020-07-12 12:20:26.626924: 
+epoch:  862 
+2020-07-12 12:24:03.359922: train loss : -0.9019 
+2020-07-12 12:24:19.700550: validation loss: -0.8969 
+2020-07-12 12:24:19.702272: Average global foreground Dice: [0.9688441123105568, 0.9609781982131997] 
+2020-07-12 12:24:19.703251: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:24:20.867799: lr: 0.001671 
+2020-07-12 12:24:20.905000: saving checkpoint... 
+2020-07-12 12:24:23.007729: done, saving took 2.14 seconds 
+2020-07-12 12:24:23.033005: This epoch took 236.405413 s
+ 
+2020-07-12 12:24:23.033916: 
+epoch:  863 
+2020-07-12 12:27:59.701167: train loss : -0.9072 
+2020-07-12 12:28:16.016777: validation loss: -0.9014 
+2020-07-12 12:28:16.018420: Average global foreground Dice: [0.9688470681140187, 0.96116950023941] 
+2020-07-12 12:28:16.019300: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:28:17.267462: lr: 0.00166 
+2020-07-12 12:28:17.304903: saving checkpoint... 
+2020-07-12 12:28:19.570481: done, saving took 2.30 seconds 
+2020-07-12 12:28:19.594268: This epoch took 236.559565 s
+ 
+2020-07-12 12:28:19.595205: 
+epoch:  864 
+2020-07-12 12:31:56.247132: train loss : -0.9004 
+2020-07-12 12:32:12.578357: validation loss: -0.8892 
+2020-07-12 12:32:12.580019: Average global foreground Dice: [0.9661566569762577, 0.9589278896635347] 
+2020-07-12 12:32:12.580975: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:32:13.744019: lr: 0.001649 
+2020-07-12 12:32:13.745147: This epoch took 234.149247 s
+ 
+2020-07-12 12:32:13.745929: 
+epoch:  865 
+2020-07-12 12:35:50.485944: train loss : -0.8982 
+2020-07-12 12:36:06.800915: validation loss: -0.8933 
+2020-07-12 12:36:06.802604: Average global foreground Dice: [0.9672645726984749, 0.9577948564532903] 
+2020-07-12 12:36:06.803536: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:36:07.969289: lr: 0.001638 
+2020-07-12 12:36:07.970433: This epoch took 234.223877 s
+ 
+2020-07-12 12:36:07.971227: 
+epoch:  866 
+2020-07-12 12:39:44.752789: train loss : -0.8932 
+2020-07-12 12:40:01.078822: validation loss: -0.8926 
+2020-07-12 12:40:01.080516: Average global foreground Dice: [0.9625893293850342, 0.9626163502612387] 
+2020-07-12 12:40:01.081328: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:40:02.247836: lr: 0.001627 
+2020-07-12 12:40:02.248986: This epoch took 234.277109 s
+ 
+2020-07-12 12:40:02.249753: 
+epoch:  867 
+2020-07-12 12:43:39.121315: train loss : -0.9033 
+2020-07-12 12:43:55.431075: validation loss: -0.9005 
+2020-07-12 12:43:55.432795: Average global foreground Dice: [0.9660594504835065, 0.9644917271597032] 
+2020-07-12 12:43:55.433761: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:43:56.597544: lr: 0.001616 
+2020-07-12 12:43:56.598665: This epoch took 234.348288 s
+ 
+2020-07-12 12:43:56.599366: 
+epoch:  868 
+2020-07-12 12:47:33.295084: train loss : -0.8950 
+2020-07-12 12:47:49.602051: validation loss: -0.8986 
+2020-07-12 12:47:49.603660: Average global foreground Dice: [0.9679194125174985, 0.9633920133912192] 
+2020-07-12 12:47:49.604625: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:47:50.767401: lr: 0.001605 
+2020-07-12 12:47:50.804628: saving checkpoint... 
+2020-07-12 12:47:52.961355: done, saving took 2.19 seconds 
+2020-07-12 12:47:52.986287: This epoch took 236.386280 s
+ 
+2020-07-12 12:47:52.987127: 
+epoch:  869 
+2020-07-12 12:51:29.885731: train loss : -0.8931 
+2020-07-12 12:51:46.205516: validation loss: -0.8883 
+2020-07-12 12:51:46.207292: Average global foreground Dice: [0.9656223285549538, 0.9551419288288444] 
+2020-07-12 12:51:46.208250: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:51:47.370951: lr: 0.001594 
+2020-07-12 12:51:47.372107: This epoch took 234.384202 s
+ 
+2020-07-12 12:51:47.372740: 
+epoch:  870 
+2020-07-12 12:55:24.113164: train loss : -0.8901 
+2020-07-12 12:55:40.407325: validation loss: -0.8883 
+2020-07-12 12:55:40.409007: Average global foreground Dice: [0.9670049077812329, 0.9602492237245533] 
+2020-07-12 12:55:40.409898: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:55:41.573019: lr: 0.001583 
+2020-07-12 12:55:41.574095: This epoch took 234.200737 s
+ 
+2020-07-12 12:55:41.574861: 
+epoch:  871 
+2020-07-12 12:59:18.358987: train loss : -0.9018 
+2020-07-12 12:59:34.683656: validation loss: -0.8898 
+2020-07-12 12:59:34.685620: Average global foreground Dice: [0.9701048070875053, 0.9589868526118759] 
+2020-07-12 12:59:34.686635: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 12:59:35.866866: lr: 0.001572 
+2020-07-12 12:59:35.868064: This epoch took 234.292559 s
+ 
+2020-07-12 12:59:35.868843: 
+epoch:  872 
+2020-07-12 13:03:12.651337: train loss : -0.8967 
+2020-07-12 13:03:29.006830: validation loss: -0.8925 
+2020-07-12 13:03:29.008493: Average global foreground Dice: [0.9689063991112609, 0.9604154134511342] 
+2020-07-12 13:03:29.009329: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:03:30.173070: lr: 0.001561 
+2020-07-12 13:03:30.174179: This epoch took 234.304648 s
+ 
+2020-07-12 13:03:30.174778: 
+epoch:  873 
+2020-07-12 13:07:07.034926: train loss : -0.8983 
+2020-07-12 13:07:23.356815: validation loss: -0.8976 
+2020-07-12 13:07:23.358614: Average global foreground Dice: [0.9663854121332127, 0.9602117581392431] 
+2020-07-12 13:07:23.359558: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:07:24.523464: lr: 0.00155 
+2020-07-12 13:07:24.524635: This epoch took 234.349299 s
+ 
+2020-07-12 13:07:24.525358: 
+epoch:  874 
+2020-07-12 13:11:00.961975: train loss : -0.9005 
+2020-07-12 13:11:17.238475: validation loss: -0.8994 
+2020-07-12 13:11:17.240090: Average global foreground Dice: [0.9681654287672334, 0.9603079578549106] 
+2020-07-12 13:11:17.241006: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:11:18.407762: lr: 0.001539 
+2020-07-12 13:11:18.408860: This epoch took 233.882819 s
+ 
+2020-07-12 13:11:18.409628: 
+epoch:  875 
+2020-07-12 13:14:54.685703: train loss : -0.9031 
+2020-07-12 13:15:10.931258: validation loss: -0.9013 
+2020-07-12 13:15:10.932864: Average global foreground Dice: [0.96864713600648, 0.9640847931529537] 
+2020-07-12 13:15:10.933696: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:15:12.096914: lr: 0.001528 
+2020-07-12 13:15:12.134068: saving checkpoint... 
+2020-07-12 13:15:14.403606: done, saving took 2.31 seconds 
+2020-07-12 13:15:14.437989: This epoch took 236.027648 s
+ 
+2020-07-12 13:15:14.439030: 
+epoch:  876 
+2020-07-12 13:18:51.304778: train loss : -0.9040 
+2020-07-12 13:19:07.617864: validation loss: -0.8991 
+2020-07-12 13:19:07.619636: Average global foreground Dice: [0.9682532562080255, 0.9602782561841671] 
+2020-07-12 13:19:07.620530: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:19:08.871184: lr: 0.001517 
+2020-07-12 13:19:08.907990: saving checkpoint... 
+2020-07-12 13:19:11.119487: done, saving took 2.25 seconds 
+2020-07-12 13:19:11.143310: This epoch took 236.703610 s
+ 
+2020-07-12 13:19:11.144223: 
+epoch:  877 
+2020-07-12 13:22:47.964895: train loss : -0.9051 
+2020-07-12 13:23:04.289672: validation loss: -0.8929 
+2020-07-12 13:23:04.291278: Average global foreground Dice: [0.9692930687078227, 0.958985055075553] 
+2020-07-12 13:23:04.292230: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:23:05.454463: lr: 0.001506 
+2020-07-12 13:23:05.491206: saving checkpoint... 
+2020-07-12 13:23:07.737178: done, saving took 2.28 seconds 
+2020-07-12 13:23:07.761971: This epoch took 236.617136 s
+ 
+2020-07-12 13:23:07.762842: 
+epoch:  878 
+2020-07-12 13:26:44.717314: train loss : -0.8996 
+2020-07-12 13:27:01.037692: validation loss: -0.8965 
+2020-07-12 13:27:01.039503: Average global foreground Dice: [0.9659948349006363, 0.9589096563710573] 
+2020-07-12 13:27:01.040481: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:27:02.209486: lr: 0.001495 
+2020-07-12 13:27:02.210549: This epoch took 234.447020 s
+ 
+2020-07-12 13:27:02.211181: 
+epoch:  879 
+2020-07-12 13:30:38.960645: train loss : -0.8973 
+2020-07-12 13:30:55.290234: validation loss: -0.8946 
+2020-07-12 13:30:55.291835: Average global foreground Dice: [0.967975527392552, 0.9593293418766576] 
+2020-07-12 13:30:55.292712: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:30:56.458329: lr: 0.001483 
+2020-07-12 13:30:56.459548: This epoch took 234.247787 s
+ 
+2020-07-12 13:30:56.460290: 
+epoch:  880 
+2020-07-12 13:34:33.193073: train loss : -0.9011 
+2020-07-12 13:34:49.471566: validation loss: -0.8901 
+2020-07-12 13:34:49.473312: Average global foreground Dice: [0.9655945263322421, 0.9624935639574339] 
+2020-07-12 13:34:49.474274: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:34:50.656761: lr: 0.001472 
+2020-07-12 13:34:50.657904: This epoch took 234.196996 s
+ 
+2020-07-12 13:34:50.658557: 
+epoch:  881 
+2020-07-12 13:38:27.007674: train loss : -0.9020 
+2020-07-12 13:38:43.264779: validation loss: -0.9003 
+2020-07-12 13:38:43.266496: Average global foreground Dice: [0.96642883217443, 0.9608301094929894] 
+2020-07-12 13:38:43.267459: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:38:44.433436: lr: 0.001461 
+2020-07-12 13:38:44.434657: This epoch took 233.775435 s
+ 
+2020-07-12 13:38:44.435411: 
+epoch:  882 
+2020-07-12 13:42:20.756129: train loss : -0.8986 
+2020-07-12 13:42:37.028579: validation loss: -0.9056 
+2020-07-12 13:42:37.030378: Average global foreground Dice: [0.9685145127097589, 0.9639608395563073] 
+2020-07-12 13:42:37.031344: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:42:38.195982: lr: 0.00145 
+2020-07-12 13:42:38.237071: saving checkpoint... 
+2020-07-12 13:42:40.446285: done, saving took 2.25 seconds 
+2020-07-12 13:42:40.471519: This epoch took 236.035488 s
+ 
+2020-07-12 13:42:40.472437: 
+epoch:  883 
+2020-07-12 13:46:16.914853: train loss : -0.9005 
+2020-07-12 13:46:33.162958: validation loss: -0.8971 
+2020-07-12 13:46:33.164636: Average global foreground Dice: [0.9656413192827623, 0.9630423142891188] 
+2020-07-12 13:46:33.165556: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:46:34.330334: lr: 0.001439 
+2020-07-12 13:46:34.367421: saving checkpoint... 
+2020-07-12 13:46:36.560824: done, saving took 2.23 seconds 
+2020-07-12 13:46:36.600156: This epoch took 236.126988 s
+ 
+2020-07-12 13:46:36.601100: 
+epoch:  884 
+2020-07-12 13:50:13.012172: train loss : -0.9006 
+2020-07-12 13:50:29.299440: validation loss: -0.9005 
+2020-07-12 13:50:29.301209: Average global foreground Dice: [0.9682794642887556, 0.9615359721343164] 
+2020-07-12 13:50:29.302104: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:50:30.464135: lr: 0.001428 
+2020-07-12 13:50:30.501796: saving checkpoint... 
+2020-07-12 13:50:32.712819: done, saving took 2.25 seconds 
+2020-07-12 13:50:32.738407: This epoch took 236.136490 s
+ 
+2020-07-12 13:50:32.739226: 
+epoch:  885 
+2020-07-12 13:54:09.603519: train loss : -0.9007 
+2020-07-12 13:54:25.911364: validation loss: -0.8979 
+2020-07-12 13:54:25.913013: Average global foreground Dice: [0.9675198191519706, 0.9611933980903856] 
+2020-07-12 13:54:25.913938: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:54:27.157910: lr: 0.001416 
+2020-07-12 13:54:27.195022: saving checkpoint... 
+2020-07-12 13:54:29.610676: done, saving took 2.45 seconds 
+2020-07-12 13:54:29.637224: This epoch took 236.897306 s
+ 
+2020-07-12 13:54:29.638153: 
+epoch:  886 
+2020-07-12 13:58:06.420965: train loss : -0.9048 
+2020-07-12 13:58:22.714467: validation loss: -0.8964 
+2020-07-12 13:58:22.716259: Average global foreground Dice: [0.9684091127799762, 0.9604055689341909] 
+2020-07-12 13:58:22.717179: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 13:58:23.879861: lr: 0.001405 
+2020-07-12 13:58:23.916980: saving checkpoint... 
+2020-07-12 13:58:26.137773: done, saving took 2.26 seconds 
+2020-07-12 13:58:26.162735: This epoch took 236.523804 s
+ 
+2020-07-12 13:58:26.163635: 
+epoch:  887 
+2020-07-12 14:02:02.452548: train loss : -0.9021 
+2020-07-12 14:02:18.772396: validation loss: -0.9018 
+2020-07-12 14:02:18.774052: Average global foreground Dice: [0.9681681291161969, 0.9634245025630436] 
+2020-07-12 14:02:18.774917: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:02:19.946374: lr: 0.001394 
+2020-07-12 14:02:19.984380: saving checkpoint... 
+2020-07-12 14:02:22.235579: done, saving took 2.29 seconds 
+2020-07-12 14:02:22.261268: This epoch took 236.097002 s
+ 
+2020-07-12 14:02:22.262201: 
+epoch:  888 
+2020-07-12 14:05:58.657183: train loss : -0.9021 
+2020-07-12 14:06:14.933074: validation loss: -0.8995 
+2020-07-12 14:06:14.934689: Average global foreground Dice: [0.9667606699769172, 0.9647740637012366] 
+2020-07-12 14:06:14.935671: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:06:16.104605: lr: 0.001383 
+2020-07-12 14:06:16.142440: saving checkpoint... 
+2020-07-12 14:06:18.366575: done, saving took 2.26 seconds 
+2020-07-12 14:06:18.391464: This epoch took 236.128521 s
+ 
+2020-07-12 14:06:18.392326: 
+epoch:  889 
+2020-07-12 14:09:54.854959: train loss : -0.9022 
+2020-07-12 14:10:11.114676: validation loss: -0.8987 
+2020-07-12 14:10:11.116351: Average global foreground Dice: [0.9683795516312265, 0.9598799115775729] 
+2020-07-12 14:10:11.117284: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:10:12.283073: lr: 0.001372 
+2020-07-12 14:10:12.284160: This epoch took 233.891075 s
+ 
+2020-07-12 14:10:12.284793: 
+epoch:  890 
+2020-07-12 14:13:48.532099: train loss : -0.8983 
+2020-07-12 14:14:04.799123: validation loss: -0.8903 
+2020-07-12 14:14:04.800863: Average global foreground Dice: [0.9665956468643937, 0.9581301840311209] 
+2020-07-12 14:14:04.801772: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:14:05.971763: lr: 0.00136 
+2020-07-12 14:14:05.972941: This epoch took 233.687586 s
+ 
+2020-07-12 14:14:05.973649: 
+epoch:  891 
+2020-07-12 14:17:42.279566: train loss : -0.9036 
+2020-07-12 14:17:58.542849: validation loss: -0.8949 
+2020-07-12 14:17:58.544582: Average global foreground Dice: [0.9693220308252355, 0.9602497894127469] 
+2020-07-12 14:17:58.545532: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:17:59.711217: lr: 0.001349 
+2020-07-12 14:17:59.712522: This epoch took 233.738233 s
+ 
+2020-07-12 14:17:59.713271: 
+epoch:  892 
+2020-07-12 14:21:36.084075: train loss : -0.9035 
+2020-07-12 14:21:52.354646: validation loss: -0.8993 
+2020-07-12 14:21:52.356338: Average global foreground Dice: [0.9690134337737037, 0.961777993111254] 
+2020-07-12 14:21:52.357276: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:21:53.525814: lr: 0.001338 
+2020-07-12 14:21:53.526989: This epoch took 233.813038 s
+ 
+2020-07-12 14:21:53.527705: 
+epoch:  893 
+2020-07-12 14:25:29.887845: train loss : -0.9034 
+2020-07-12 14:25:46.148290: validation loss: -0.8966 
+2020-07-12 14:25:46.149915: Average global foreground Dice: [0.9666472905647536, 0.9632067747821597] 
+2020-07-12 14:25:46.150777: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:25:47.318464: lr: 0.001327 
+2020-07-12 14:25:47.319839: This epoch took 233.791440 s
+ 
+2020-07-12 14:25:47.320762: 
+epoch:  894 
+2020-07-12 14:29:23.591091: train loss : -0.8990 
+2020-07-12 14:29:39.867847: validation loss: -0.8944 
+2020-07-12 14:29:39.869636: Average global foreground Dice: [0.9680681702591689, 0.9619450335737685] 
+2020-07-12 14:29:39.870539: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:29:41.054095: lr: 0.001315 
+2020-07-12 14:29:41.092004: saving checkpoint... 
+2020-07-12 14:29:43.312156: done, saving took 2.26 seconds 
+2020-07-12 14:29:43.346115: This epoch took 236.024549 s
+ 
+2020-07-12 14:29:43.347117: 
+epoch:  895 
+2020-07-12 14:33:20.043312: train loss : -0.9017 
+2020-07-12 14:33:36.305384: validation loss: -0.8992 
+2020-07-12 14:33:36.307018: Average global foreground Dice: [0.9672621169788781, 0.962599589093635] 
+2020-07-12 14:33:36.307866: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:33:37.480567: lr: 0.001304 
+2020-07-12 14:33:37.518760: saving checkpoint... 
+2020-07-12 14:33:39.810583: done, saving took 2.33 seconds 
+2020-07-12 14:33:39.847924: This epoch took 236.499981 s
+ 
+2020-07-12 14:33:39.848923: 
+epoch:  896 
+2020-07-12 14:37:16.295478: train loss : -0.9025 
+2020-07-12 14:37:32.561107: validation loss: -0.8979 
+2020-07-12 14:37:32.562821: Average global foreground Dice: [0.9689767297487919, 0.9622185831488501] 
+2020-07-12 14:37:32.563797: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:37:33.735331: lr: 0.001293 
+2020-07-12 14:37:33.772881: saving checkpoint... 
+2020-07-12 14:37:36.101939: done, saving took 2.37 seconds 
+2020-07-12 14:37:36.140635: This epoch took 236.290990 s
+ 
+2020-07-12 14:37:36.141709: 
+epoch:  897 
+2020-07-12 14:41:12.515340: train loss : -0.9044 
+2020-07-12 14:41:28.798973: validation loss: -0.8987 
+2020-07-12 14:41:28.800729: Average global foreground Dice: [0.9682739539193987, 0.9615387535670279] 
+2020-07-12 14:41:28.801666: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:41:29.971564: lr: 0.001282 
+2020-07-12 14:41:30.008740: saving checkpoint... 
+2020-07-12 14:41:32.191220: done, saving took 2.22 seconds 
+2020-07-12 14:41:32.216609: This epoch took 236.074149 s
+ 
+2020-07-12 14:41:32.217528: 
+epoch:  898 
+2020-07-12 14:45:08.588367: train loss : -0.9041 
+2020-07-12 14:45:24.873917: validation loss: -0.9035 
+2020-07-12 14:45:24.875559: Average global foreground Dice: [0.9689429686391622, 0.963735658969234] 
+2020-07-12 14:45:24.876588: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:45:26.131901: lr: 0.00127 
+2020-07-12 14:45:26.168746: saving checkpoint... 
+2020-07-12 14:45:28.314024: done, saving took 2.18 seconds 
+2020-07-12 14:45:28.338660: This epoch took 236.120482 s
+ 
+2020-07-12 14:45:28.339518: 
+epoch:  899 
+2020-07-12 14:49:05.141960: train loss : -0.9034 
+2020-07-12 14:49:21.435193: validation loss: -0.8981 
+2020-07-12 14:49:21.436982: Average global foreground Dice: [0.9679950299885737, 0.9574225566673699] 
+2020-07-12 14:49:21.437907: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:49:22.608524: lr: 0.001259 
+2020-07-12 14:49:22.609729: saving scheduled checkpoint file... 
+2020-07-12 14:49:22.646838: saving checkpoint... 
+2020-07-12 14:49:23.059443: done, saving took 0.45 seconds 
+2020-07-12 14:49:23.083941: done 
+2020-07-12 14:49:23.084855: This epoch took 234.744631 s
+ 
+2020-07-12 14:49:23.085490: 
+epoch:  900 
+2020-07-12 14:52:59.863720: train loss : -0.9053 
+2020-07-12 14:53:16.225715: validation loss: -0.8966 
+2020-07-12 14:53:16.227400: Average global foreground Dice: [0.9670304912359767, 0.9598603002209908] 
+2020-07-12 14:53:16.228399: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:53:17.394220: lr: 0.001248 
+2020-07-12 14:53:17.395406: This epoch took 234.309221 s
+ 
+2020-07-12 14:53:17.396141: 
+epoch:  901 
+2020-07-12 14:56:54.140273: train loss : -0.9013 
+2020-07-12 14:57:10.441067: validation loss: -0.9004 
+2020-07-12 14:57:10.442754: Average global foreground Dice: [0.9672510352586904, 0.9630820801160288] 
+2020-07-12 14:57:10.443650: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 14:57:11.609696: lr: 0.001236 
+2020-07-12 14:57:11.610829: This epoch took 234.214005 s
+ 
+2020-07-12 14:57:11.611589: 
+epoch:  902 
+2020-07-12 15:00:48.558846: train loss : -0.9045 
+2020-07-12 15:01:04.829776: validation loss: -0.8986 
+2020-07-12 15:01:04.831539: Average global foreground Dice: [0.9680863153252197, 0.9617541061914703] 
+2020-07-12 15:01:04.832458: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:01:05.995360: lr: 0.001225 
+2020-07-12 15:01:05.996520: This epoch took 234.384159 s
+ 
+2020-07-12 15:01:05.997283: 
+epoch:  903 
+2020-07-12 15:04:42.339541: train loss : -0.9019 
+2020-07-12 15:04:58.612290: validation loss: -0.8982 
+2020-07-12 15:04:58.614074: Average global foreground Dice: [0.9679283042059403, 0.9604658715536729] 
+2020-07-12 15:04:58.615022: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:04:59.778167: lr: 0.001214 
+2020-07-12 15:04:59.779315: This epoch took 233.781383 s
+ 
+2020-07-12 15:04:59.780021: 
+epoch:  904 
+2020-07-12 15:08:36.121948: train loss : -0.9040 
+2020-07-12 15:08:52.399709: validation loss: -0.9030 
+2020-07-12 15:08:52.401469: Average global foreground Dice: [0.9663272995567439, 0.9615636903270597] 
+2020-07-12 15:08:52.402488: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:08:53.564386: lr: 0.001202 
+2020-07-12 15:08:53.565544: This epoch took 233.784775 s
+ 
+2020-07-12 15:08:53.566261: 
+epoch:  905 
+2020-07-12 15:12:29.867580: train loss : -0.9036 
+2020-07-12 15:12:46.116136: validation loss: -0.8947 
+2020-07-12 15:12:46.118026: Average global foreground Dice: [0.9678020451575479, 0.9629457509339635] 
+2020-07-12 15:12:46.119037: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:12:47.287558: lr: 0.001191 
+2020-07-12 15:12:47.288657: This epoch took 233.721723 s
+ 
+2020-07-12 15:12:47.289411: 
+epoch:  906 
+2020-07-12 15:16:23.655266: train loss : -0.9036 
+2020-07-12 15:16:39.910782: validation loss: -0.8963 
+2020-07-12 15:16:39.912510: Average global foreground Dice: [0.9665301729443379, 0.9614016683362689] 
+2020-07-12 15:16:39.913318: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:16:41.081249: lr: 0.001179 
+2020-07-12 15:16:41.082417: This epoch took 233.792322 s
+ 
+2020-07-12 15:16:41.083114: 
+epoch:  907 
+2020-07-12 15:20:17.503538: train loss : -0.9029 
+2020-07-12 15:20:33.775416: validation loss: -0.8991 
+2020-07-12 15:20:33.777065: Average global foreground Dice: [0.9710265619526485, 0.962431821359062] 
+2020-07-12 15:20:33.777966: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:20:34.945285: lr: 0.001168 
+2020-07-12 15:20:34.946540: This epoch took 233.862687 s
+ 
+2020-07-12 15:20:34.947142: 
+epoch:  908 
+2020-07-12 15:24:11.394958: train loss : -0.9032 
+2020-07-12 15:24:27.650674: validation loss: -0.8996 
+2020-07-12 15:24:27.652338: Average global foreground Dice: [0.9678513183112581, 0.9608827801904293] 
+2020-07-12 15:24:27.653210: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:24:28.817389: lr: 0.001156 
+2020-07-12 15:24:28.818576: This epoch took 233.870869 s
+ 
+2020-07-12 15:24:28.819298: 
+epoch:  909 
+2020-07-12 15:28:05.165581: train loss : -0.9029 
+2020-07-12 15:28:21.430698: validation loss: -0.9043 
+2020-07-12 15:28:21.432425: Average global foreground Dice: [0.9683414964567618, 0.9629684242682395] 
+2020-07-12 15:28:21.433367: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:28:22.602846: lr: 0.001145 
+2020-07-12 15:28:22.604009: This epoch took 233.784007 s
+ 
+2020-07-12 15:28:22.604783: 
+epoch:  910 
+2020-07-12 15:31:58.970982: train loss : -0.9039 
+2020-07-12 15:32:15.251071: validation loss: -0.8860 
+2020-07-12 15:32:15.252870: Average global foreground Dice: [0.9700522428019707, 0.9600612360026538] 
+2020-07-12 15:32:15.253870: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:32:16.422728: lr: 0.001134 
+2020-07-12 15:32:16.423874: This epoch took 233.818452 s
+ 
+2020-07-12 15:32:16.424529: 
+epoch:  911 
+2020-07-12 15:35:52.760361: train loss : -0.9023 
+2020-07-12 15:36:09.037117: validation loss: -0.8979 
+2020-07-12 15:36:09.038691: Average global foreground Dice: [0.9692589073527808, 0.9621541212293427] 
+2020-07-12 15:36:09.039509: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:36:10.211764: lr: 0.001122 
+2020-07-12 15:36:10.265280: saving checkpoint... 
+2020-07-12 15:36:12.493269: done, saving took 2.26 seconds 
+2020-07-12 15:36:12.529471: This epoch took 236.104157 s
+ 
+2020-07-12 15:36:12.530449: 
+epoch:  912 
+2020-07-12 15:39:48.896954: train loss : -0.9070 
+2020-07-12 15:40:05.164571: validation loss: -0.8966 
+2020-07-12 15:40:05.166255: Average global foreground Dice: [0.9684380965033829, 0.9601899446620269] 
+2020-07-12 15:40:05.167119: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:40:06.336361: lr: 0.001111 
+2020-07-12 15:40:06.337507: This epoch took 233.806408 s
+ 
+2020-07-12 15:40:06.338245: 
+epoch:  913 
+2020-07-12 15:43:42.673136: train loss : -0.9079 
+2020-07-12 15:43:58.963871: validation loss: -0.9024 
+2020-07-12 15:43:58.965362: Average global foreground Dice: [0.9678729535398902, 0.9616854466399435] 
+2020-07-12 15:43:58.966280: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:44:00.134653: lr: 0.001099 
+2020-07-12 15:44:00.135782: This epoch took 233.796949 s
+ 
+2020-07-12 15:44:00.136568: 
+epoch:  914 
+2020-07-12 15:47:36.522793: train loss : -0.8999 
+2020-07-12 15:47:52.773838: validation loss: -0.8939 
+2020-07-12 15:47:52.775640: Average global foreground Dice: [0.9685816375598916, 0.9596308734221053] 
+2020-07-12 15:47:52.776533: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:47:53.939879: lr: 0.001088 
+2020-07-12 15:47:53.940950: This epoch took 233.803678 s
+ 
+2020-07-12 15:47:53.941630: 
+epoch:  915 
+2020-07-12 15:51:30.525971: train loss : -0.9062 
+2020-07-12 15:51:46.784303: validation loss: -0.9001 
+2020-07-12 15:51:46.786035: Average global foreground Dice: [0.9655625810463215, 0.9598223987783835] 
+2020-07-12 15:51:46.787080: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:51:47.969791: lr: 0.001076 
+2020-07-12 15:51:47.987923: This epoch took 234.045669 s
+ 
+2020-07-12 15:51:47.988741: 
+epoch:  916 
+2020-07-12 15:55:24.397122: train loss : -0.9045 
+2020-07-12 15:55:40.694896: validation loss: -0.9025 
+2020-07-12 15:55:40.696742: Average global foreground Dice: [0.9666447204535904, 0.9608047836142574] 
+2020-07-12 15:55:40.697738: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:55:41.863428: lr: 0.001065 
+2020-07-12 15:55:41.864573: This epoch took 233.875121 s
+ 
+2020-07-12 15:55:41.865375: 
+epoch:  917 
+2020-07-12 15:59:18.245337: train loss : -0.9055 
+2020-07-12 15:59:34.534658: validation loss: -0.9038 
+2020-07-12 15:59:34.536421: Average global foreground Dice: [0.9706265922735787, 0.9598048096030101] 
+2020-07-12 15:59:34.537368: (interpret this as an estimate for the Dice of the different classes. This is not exact.) 
+2020-07-12 15:59:35.704344: lr: 0.001053 
+2020-07-12 15:59:35.705543: This epoch took 233.839455 s
+ 
+2020-07-12 15:59:35.706193: 
+epoch:  918 

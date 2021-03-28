@@ -1,0 +1,12 @@
+torch==1.6.0
+numpy==1.19.1
+tqdm
+scikit-image>=0.14
+medpy==0.4.0
+scipy==1.4.1
+batchgenerators>=0.19.3
+scikit-learn==0.20.0
+nilearn==0.6.2
+nipype
+pandas
+setuptools==41.4.0
