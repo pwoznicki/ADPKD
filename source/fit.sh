@@ -7,13 +7,13 @@ Model="large"
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
-        --InputVol)
+        -i|--InputVol)
             InputVol="$2"; shift 2
             ;;
-        --OutputDir)
+        -o|--OutputDir)
             OutputDir="$2"; shift 2
             ;;
-        --large)
+        --small)
             Model="small"; shift
             ;;
         *)
@@ -50,14 +50,14 @@ echo ${Task}
 #infer segmentation model
 cd ${SourceDir}/nnUNet
 
-if [ "${Model}"=="large" ]
+if [[ "${Model}" == "large" ]]
 then
     nnUNet_predict -i ${WorkDir}/input -o ${WorkDir}/output/3d_fullres -m 3d_fullres -tr nnUNetTrainerV2 -ctr nnUNetTrainerV2CascadeFullRes -p nnUNetPlansv2.1 -t ${Task} --save_npz
     nnUNet_predict -i ${WorkDir}/input -o ${WorkDir}/output/2d -m 2d -tr nnUNetTrainerV2 -ctr nnUNetTrainerV2CascadeFullRes -p nnUNetPlansv2.1 -t ${Task} --save_npz
     nnUNet_ensemble -f ${WorkDir}/output/3d_fullres ${WorkDir}/output/2d -o ${WorkDir}/output/ensemble \
         -pp ${RESULTS_FOLDER}/nnUNet/ensembles/${Task}/ensemble_2d__nnUNetTrainerV2__nnUNetPlansv2.1--3d_fullres__nnUNetTrainerV2__nnUNetPlansv2.1/postprocessing.json
 else
-    nnUNet_predict -i ${WorkDir}/input -o ${WorkDir}/output/ensemble -m 3d_fullres -tr nnUNetTrainerV2 -ctr nnUNetTrainerV2CascadeFullRes -p nnUNetPlansv2.1 -t ${Task}
+    nnUNet_predict -i ${WorkDir}/input -o ${WorkDir}/output/ensemble -m 2d -tr nnUNetTrainerV2 -ctr nnUNetTrainerV2CascadeFullRes -p nnUNetPlansv2.1 -t ${Task}
 fi
 python3 ${SourceDir}/move_result_maybe_reorient.py --image_path ${InputVol} --mask_path ${WorkDir}/output/ensemble/1.nii.gz --output_dir ${OutputDir} --task ${Task}
 
