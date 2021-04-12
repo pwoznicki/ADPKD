@@ -1,4 +1,0 @@
-model,class1,average
-2d,0.9001,0.9001
-3d_fullres,0.9111,0.9111
-ensemble_2d__nnUNetTrainerV2__nnUNetPlansv2.1--3d_fullres__nnUNetTrainerV2__nnUNetPlansv2.1,0.9119,0.9119

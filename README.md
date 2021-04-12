@@ -28,3 +28,6 @@ $ bash fit.sh  \
     -i /workspace/test_data/T2_cor.nii.gz
     -o /workspace/data/test_results_cor
 ```
+
+### Before building the docker image, download the folder *trained_models* from https://1drv.ms/u/s!AnhzaNTTUa9GgcAL_QozihGMlOufzA?e=9A5SRG and place it in the *source* directory
+```
