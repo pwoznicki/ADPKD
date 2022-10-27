@@ -1,7 +1,9 @@
-### Download docker image (private repo)
+### Download docker image
 ```
 $ docker pull piotrekwoznicki/adpkd-net:v0.1
 ```
+More instructions on the inference can be found at [Docker Hub](https://hub.docker.com/repository/docker/piotrekwoznicki/adpkd-net).
+
 ### Run
 #### 1. Launch the container:
 ```
