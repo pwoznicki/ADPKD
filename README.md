@@ -1,16 +1,21 @@
 ### Download docker image
+
 ```
 $ docker pull piotrekwoznicki/adpkd-net:v0.1
 ```
+
 More instructions on the inference can be found at [Docker Hub](https://hub.docker.com/repository/docker/piotrekwoznicki/adpkd-net).
 
 ### Run
+
 #### 1. Launch the container:
+
 ```
 $ bash launch_container.sh [path_to_dataset - will be mounted at /workspace/data]
 ```
 
 #### 2. Run inference:
+
 ```
 $ cd /workspace/source
 $ bash fit.sh  \
@@ -20,6 +25,7 @@ $ bash fit.sh  \
 ```
 
 #### 3. Run inference for test:
+
 ```
 $ cd /workspace/source
 $ bash fit.sh  \
@@ -31,5 +37,5 @@ $ bash fit.sh  \
     -o /workspace/data/test_results_cor
 ```
 
-### Before building the docker image, download the folder *trained_models* from https://1drv.ms/u/s!AnhzaNTTUa9GgcAL_QozihGMlOufzA?e=9A5SRG and place it in the *source* directory
-```
+### Before building the docker image, download the folder _trained_models_ from [GDrive](https://drive.google.com/drive/folders/1D2glVKAKcAdQmmqct964RZoxHCpyDqgc?usp=sharing) and place it in the _source_ directory
+
